@@ -1943,6 +1943,7 @@ fieldset[disabled] .form-control {
 
 textarea.form-control {
   height: auto;
+  max-width: 100% !important;
 }
 
 .form-group {
