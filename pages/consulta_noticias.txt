@@ -1,0 +1,15 @@
+<?php
+	require_once("../php/conexion.php");
+	$query = mysql_query("SELECT * FROM noticias WHERE importancia = 1 ORDER BY fecha_publicacion DESC LIMIT 3", $conexion)or die ("Error consulta".mysql_error());
+	while($row = mysql_fetch_assoc($query)){
+?>
+	<div class="active item">
+		<a href="#">
+			<h2><?php echo $row['titular']; ?></h2>
+			<img class="not_inicio" src="../img_noticias/<?php echo $row['titular']; ?>" alt="">
+		</a>
+		<p><?php echo $row['resumen']; ?> </p>
+	</div>
+<?php 
+	} 
+?>
