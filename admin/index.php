@@ -1,6 +1,6 @@
 <html lang="es">
 	<head>
-		<meta http-equiv="refresh" content="3.5; url=noticias.php" />
+		<meta http-equiv="refresh" content="2.5; url=noticias.php" />
 		<title>Campus Virtual</title>
 	</head>
 <body>

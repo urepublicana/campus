@@ -11,10 +11,12 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li id="admin_noticias"><a href="admin_noticias.php"><i class="fa fa-paper icon"></i>NOTICIAS</a></li>
-            <li id="admin_usuarios"><a href="admin_usuarios.php"><i class="fa fa-comments icon"></i>USUARIOS</a></li>			
+            <li id="admin_noticias"><a href="noticias.php"><i class="fa fa-comments icon"></i>NOTICIAS</a></li>
+            <li id="admin_usuarios"><a href="usuarios.php"><i class="fa fa-comments icon"></i>USUARIOS</a></li>			
 		  </ul>
-			<?php print ("<script>document.getElementById('$pagina').className = 'active';</script>");?> 
+			<?php
+        print ("<script>document.getElementById('$pagina').className = 'active';</script>");
+      ?> 
         </div><!--/.nav-collapse -->
       </div>
     </div>

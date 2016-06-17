@@ -13,7 +13,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li id="index"><a href="index.php"><i class="fa fa-home icon"></i>INICIO</a></li>
             <li id="ingreso"><a href="ingreso.php"><i class="fa fa-unlock icon"></i>INGRESO</a></li>
-            <li id="ayuda"><a href="ayuda.php"><i class="fa fa-comments icon"></i>¿NECESITAS AYUDA?</a></li>
+            <li id="ayuda"><a href="ayuda.php"><i class="fa fa-comments icon"></i>&iquest;NECESITAS AYUDA?</a></li>
             <li id="universidad"><a href="universidad.php"><i class="fa fa-bookmark icon"></i>UNIVERSIDAD</a></li>
             <li id="bienestar"><a href="bienestar.php"><i class="fa fa-heart-o icon"></i>BIENESTAR</a></li>
 			

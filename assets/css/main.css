@@ -44,7 +44,6 @@ p {
 a {
     color: #A14A52;
     word-wrap: break-word;
-
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
     -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
     -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -436,13 +435,13 @@ a:after {
 /* ===== Elementos animados */
 
 
-#elem_left{
+#elem_1{
 	visibility: hidden;
 }
-#elem_center{
+#elem_2{
 	visibility: hidden;
 }
-#elem_right{
+#elem_3{
 	visibility: hidden;
 }
 

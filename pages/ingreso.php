@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
 	<?php 
-	require_once("../php/conexion.php");
 	require_once("../requiere/head.php"); ?>
   </head>
 
@@ -31,8 +30,8 @@
 				<div id="myCarousel" class="carousel slide">
 				<!-- Carousel items -->
 					<div class="carousel-inner">
+
 						<?php
-						
 							$consulta = "SELECT * FROM noticias WHERE importancia = 1 ORDER BY fecha_publicacion DESC";
 							if ($resultado = $conexion->query($consulta)) {
 							$aux = 0;
@@ -49,7 +48,7 @@
 									print ("<div class='item $clase'>
 										<a href='#'>
 										<h2>$row[titular]</h2>
-										<img class='not_inicio img-circle' src='../php/img_news/$row[imagen]'>
+											<img class='not_inicio img-circle' src='../admin/imgs_news/$row[imagen]' title='$row[resumen]'>
 										</a>
 										<p>$row[resumen]</p>
 										</div>");
@@ -57,8 +56,6 @@
 								/* liberar el conjunto de resultados */
 								$resultado->free();
 							}
-							/* cerrar la conexión */
-							$conexion->close();
 						?>
 					</div>
 				<ol class="carousel-indicators">
@@ -112,24 +109,24 @@
 	</div><!-- container -->
 	
 	
-	<div id="dg">
+	<div class="container w">
 		<div class="container">
-			<div class="row">
+			<div class="row centered">
 				<h3>¿NECESITAS AYUDA?</h3><br>
+				<div class="col-lg-3"> 
+				</div>
 				<div class="col-lg-6">
 					<table>
 						<tr>
-							<td><img src="../imgs/help_chat.png" class="not_inicio" /></td>
-							<td><img src="../imgs/help_faq.png" class="not_inicio" /></td>
-							<td><img src="../imgs/help_ticket.png" class="not_inicio" /></td>
-							<td><img src="../imgs/help_check.png" class="not_inicio" /></td>
+							<td><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></td>
+							<td><img src="../imgs/help_faq.png" class="not_inicio" title="Preguntas Frecuentes"/></td>
+							<td><img src="../imgs/help_ticket.png" class="not_inicio" title="Tickets"/></td>
+							<td><img src="../imgs/help_check.png" class="not_inicio" title="Verifica"/></td>
 						</tr>
 					</table>
 				</div>
-				<div class="col-lg-1"> 
-				</div>
-				<div class="col-lg-5"> 
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+				<div class="col-lg-3"> 
+					
 				</div>
 				
 			</div><!-- row -->

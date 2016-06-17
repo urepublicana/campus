@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<?php require_once("../requiere/head.php"); ?>
+	<?php 
+	require_once("../php/conexion.php");
+	require_once("../requiere/head.php"); ?>
   </head>
 
   <body>
@@ -43,26 +45,28 @@
 			<div class="row centered">
 				<h4>NOTICIAS</h4>
 				<br>
-				<div class="col-lg-4" id="elem_right">
-					<div class="tilt">
-					<a href="#"><img src="../imgs/news.png" class="not_inicio" alt=""></a>
-					</div>
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable</p>
-				</div>
-
-				<div class="col-lg-4" id="elem_center"> 
-					<div class="tilt">
-					<a href="#"><img src="../imgs/news.png" class="not_inicio" alt=""></a>
-					</div>
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable</p>
-				</div>
-
-				<div class="col-lg-4" id="elem_left">
-					<div class="tilt">
-					<a href="#"><img src="../imgs/news.png" class="not_inicio" alt=""></a>
-					</div>
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable</p>
-				</div>
+				<?php 
+					$consulta = "SELECT * FROM noticias ORDER BY fecha_publicacion DESC LIMIT 0,3";
+							if ($resultado = $conexion->query($consulta)) {
+								$aux = 0;
+								$clase = "";
+								/* obtener un array asociativo */
+								while ($row = $resultado->fetch_assoc()) {
+									$aux++;
+									print("
+									<div class='col-lg-4' id='elem_$aux'>
+										<h3>$row[titular]</h3>
+										<div class='tilt'>
+											<a href='#'><img class='not_inicio img-circle' src='../admin/imgs_news/$row[imagen]'></a>
+										</div>
+										<p>$row[resumen]<br></p>
+									</div>");
+								}
+								/* liberar el conjunto de resultados */
+								$resultado->free();
+							}
+				?>
+				<br>
 			</div><!-- row -->
 		</div><!-- container -->
 	</div><!-- DG -->

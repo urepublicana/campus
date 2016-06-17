@@ -3,7 +3,7 @@
 		<div class="container">
 				<div class="col-lg-4">
 					<ul class="nav">
-						<li><span class="fa fa-dribbble"/><a href="index.php">Paginá Principal</a></li>
+						<li><span class="fa fa-dribbble"/><a href="index.php">Pagina Principal</a></li>
 						<li><span class="fa fa-book"/><a href="index.php">Biblioteca</a></li>
 						<li><span class="fa fa-coffee"/><a href="index.php">Otra</a></li>
 					</ul>
@@ -21,6 +21,10 @@
 	</div><!-- Footer -->
 
 
+	<?php 
+	//CERRAR CONEXION
+	mysqli_close($conexion);
+	?>
 	<!-- MODAL FOR CONTACT -->
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -68,4 +72,4 @@
 	http://code.jquery.com/jquery-1.10.1.min.js
 	-->
     <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/funciones.js"></script>
+    
