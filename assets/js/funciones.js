@@ -63,7 +63,7 @@ $(function() {
 });
 
 function confirmar() {
-	if (!confirm("desea continuar?")) return false;
+	if (!confirm("Esta seguro que desea continuar")) return false;
 }
 
 

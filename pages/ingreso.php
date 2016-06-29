@@ -113,27 +113,23 @@
 		<div class="container">
 			<div class="row centered">
 				<h3>¿NECESITAS AYUDA?</h3><br>
-				<div class="col-lg-3"> 
+				<div class="col-lg-2"> 
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-8">
 					<table>
 						<tr>
-							<td><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></td>
-							<td><img src="../imgs/help_faq.png" class="not_inicio" title="Preguntas Frecuentes"/></td>
-							<td><img src="../imgs/help_ticket.png" class="not_inicio" title="Tickets"/></td>
-							<td><img src="../imgs/help_check.png" class="not_inicio" title="Verifica"/></td>
+							<td><h5>Chat</h5><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></td>
+							<td><h5>Tickets</h5><img src="../imgs/help_ticket.png" class="not_inicio" title="Tickets"/></td>
+							<td><h5>FAQ</h5><img src="../imgs/help_faq.png" class="not_inicio" title="Preguntas Frecuentes"/></td>
+							<td><h5>Verifica</h5><img src="../imgs/help_check.png" class="not_inicio" title="Verifica"/></td>
 						</tr>
 					</table>
 				</div>
-				<div class="col-lg-3"> 
-					
+				<div class="col-lg-2"> 
 				</div>
-				
 			</div><!-- row -->
 		</div><!-- container -->
 	</div><!-- DG -->
-
-
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>	
 	<script>

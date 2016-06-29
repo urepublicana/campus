@@ -21,7 +21,8 @@
 					<h1><b>CAMPUS VIRTUAL</b></h1>
 				</div>
 			</div>
-		</div><!-- container -->
+		</div> container -->
+		
 	</div><!-- headerwrap -->
 	
 
