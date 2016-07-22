@@ -10,7 +10,6 @@
 
     <?php 
     require_once("../php/conexion.php"); 
-    
     ?>
 
     <meta charset="utf-8">

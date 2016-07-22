@@ -46,13 +46,14 @@
 									$clase = "";
 								}
 									print ("<div class='item $clase'>
-										<a href='#'>
+										<a href='ver_noticia.php?id=$row[id_noticia]'>
 										<h2>$row[titular]</h2>
 											<img class='not_inicio img-circle' src='../admin/imgs_news/$row[imagen]' title='$row[resumen]'>
 										</a>
 										<p>$row[resumen]</p>
 										</div>");
 								}
+
 								/* liberar el conjunto de resultados */
 								$resultado->free();
 							}

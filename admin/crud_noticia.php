@@ -93,11 +93,11 @@ if($numero_post > 0){
 }
 //Eliminar noticias
 $numero_get = count($_GET);
-if($numero_get == 1 ){
+if($numero_get == 1){
 	$id = valido($_GET['id']);
 	if($id > 0){
 		$query_del = "DELETE FROM noticias WHERE id_noticia = '$id'";
-		$conexion->query($query_insert) or die ("ERROR AL ELIMINAR NOTICIA".mysql_error());
+		$conexion->query($query_del) or die ("ERROR AL ELIMINAR NOTICIA".mysql_error());
 		print("<script type='text/javascript'>window.alert('Noticia Eliminada')</script> <meta http-equiv='refresh' content='0.1; url=noticias.php' />");
 
 	}

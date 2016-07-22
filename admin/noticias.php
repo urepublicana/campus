@@ -26,7 +26,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 
-				<a data-toggle="modal" data-target="#nueva_noticia" href="#nueva_noticia"> NUEVA NOTICIA </a>
+				<a class="noticia_new" data-toggle="modal" data-target="#nueva_noticia" href="#nueva_noticia"><i class="fa fa-paperclip icon"></i>Agregar Noticia</a>
 
 				<table width="100%" cellpadding="10">
 					<tr>
@@ -46,7 +46,7 @@
 						while ($row = $resultado->fetch_assoc()) {
 							print ("<tr>
 								<td align='center'><img class='not_inicio img-circle' src='../admin/imgs_news/$row[imagen]'></td>
-								<td>$row[titular]</td>
+								<td><a href='../pages/ver_noticia.php?id=$row[id_noticia]&pagina=admin_noticias'>$row[titular]</a></td>
 								<td>$row[resumen]</td>
 								<td>$row[fecha_publicacion]</td>
 								<td><a href='noticias.php?id=$row[id_noticia]'> <i class='fa fa-edit'></i> </a></td>

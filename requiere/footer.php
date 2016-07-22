@@ -6,6 +6,7 @@
 						<li><span class="fa fa-dribbble"/><a href="index.php">Pagina Principal</a></li>
 						<li><span class="fa fa-book"/><a href="index.php">Biblioteca</a></li>
 						<li><span class="fa fa-coffee"/><a href="index.php">Otra</a></li>
+						<li><span class="fa fa-lock"/><a href="../admin/index.php">Administrar</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-4 centered">

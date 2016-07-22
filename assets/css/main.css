@@ -135,6 +135,20 @@ a:after {
           transform: rotate(-10deg);
 }
 
+.noticia_new{
+    background-color: #019341;
+    border-radius: 7px;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+.noticia_new:hover{
+    color: white;
+    text-decoration: none;
+    -webkit-box-shadow: 3px 9px 7px -8px rgba(0,0,0,0.83);
+    -moz-box-shadow: 3px 9px 7px -8px rgba(0,0,0,0.83);
+    box-shadow: 3px 9px 7px -8px rgba(0,0,0,0.83);
+}
 /* ==========================================================================
    BANNER ESTILO
    ========================================================================== */

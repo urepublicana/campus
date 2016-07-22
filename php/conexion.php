@@ -1,5 +1,5 @@
 <?php
-	$conexion = mysqli_connect("localhost", "root", "", "campus");
+	$conexion = mysqli_connect("localhost", "root", "", "bitnami_campus");
 
 	if (!$conexion) {
 		echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -9,7 +9,7 @@
 	}
 
 	//FUNCION EXPRESION REGULAR
-	function valido ($digitos){
+	function valido($digitos){
 		$patron = "/^[[:digit:]]+$/";
 		if (preg_match($patron, $digitos)) {
 			return $digitos;

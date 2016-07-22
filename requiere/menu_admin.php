@@ -11,8 +11,9 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li id="admin_noticias"><a href="noticias.php"><i class="fa fa-comments icon"></i>NOTICIAS</a></li>
-            <li id="admin_usuarios"><a href="usuarios.php"><i class="fa fa-comments icon"></i>USUARIOS</a></li>			
+            <li id="admin_noticias"><a href="../admin/noticias.php"><i class="fa fa-comments icon"></i>NOTICIAS</a></li>
+            <li id="admin_usuarios"><a href="../index.php"><i class="fa fa-lock icon"></i>CERRAR SESION</a></li>	
+            
 		  </ul>
 			<?php
         print ("<script>document.getElementById('$pagina').className = 'active';</script>");

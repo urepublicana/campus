@@ -58,7 +58,9 @@
 									<div class='col-lg-4' id='elem_$aux'>
 										<h3>$row[titular]</h3>
 										<div class='tilt'>
-											<a href='#'><img class='not_inicio img-circle' src='../admin/imgs_news/$row[imagen]'></a>
+											<a href='ver_noticia.php?id=$row[id_noticia]'>
+												<img class='not_inicio img-circle' src='../admin/imgs_news/$row[imagen]'>
+											</a>
 										</div>
 										<p>$row[resumen]<br></p>
 									</div>");
