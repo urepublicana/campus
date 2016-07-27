@@ -18,17 +18,17 @@
 		require_once("../requiere/menu.php");	
 	}
 	?> 
-
+	<!--  VER NOTICIAS
 	<div id="cabecera">
 		<div class="container">
 			<div class="row centered">
 				<div class="col-lg-8 col-lg-offset-2">
 				<h4><i class="fa fa-bookmark icon"></i>Noticias</h4>
 				</div>
-			</div><!-- row -->
-		</div><!-- container -->
-	</div><!--  bluewrap -->
-
+			</div>
+		</div>
+	</div> -->
+	<div id="cabecera"></div>
 	<div class="container w">
 		<div class="row">
 			<div class="col-lg-4">
@@ -54,4 +54,5 @@
 	<!-- FOOTER -->
 	<?php require_once("../requiere/footer.php"); ?> 
   </body>
+    <script src="../assets/js/chat-pg.js"></script>
 </html>

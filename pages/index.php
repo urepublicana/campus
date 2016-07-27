@@ -14,6 +14,7 @@
 	<div id="headerwrap">
 		
 		<img src="../imgs/fondo3.png" width="100%">
+		
 		<!--
 		<div class="container">
 			<div class="row centered">
@@ -79,4 +80,5 @@
 	<!-- FOOTER -->
 	<?php require_once("../requiere/footer.php"); ?> 
   </body>
+    <script src="../assets/js/chat-pg.js"></script>
 </html>

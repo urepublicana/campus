@@ -59,6 +59,55 @@
 	    </div><!-- /.modal-content -->
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+
+	<!-- MODAL INGRESO -->
+	<div class="modal fade" id="Ingreso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Ingreso</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row centered">
+						<form action="#" method="POST">
+							<table cellpadding="4">
+								<tr>
+									<td><h2>Ingresa a tu Aula</h2></td>
+								</tr>
+								<tr>
+									<td><input type="text" id="usuario" name="user" placeholder="Usuario" required/></td>
+								</tr>
+								<tr>
+									<td><input type="password" id="password" name="pass" placeholder="Contraseña" required/></td>
+								</tr>
+								<tr>
+									<td align="left"><input type="checkbox" id="ver_pass" onchange="mostrar('password', this.id)" /> Ver contraseña</td>
+								</tr>
+								<tr>
+									<td align="center"><input type="submit" class="btn btn-success" value="INGRESAR" required/> </td>
+								</tr>
+							</table>
+						</form>
+						<h3>¿NECESITAS AYUDA?</h3>
+						<div class="col-lg-12">
+							<table width="80%">
+								<tr>
+									<td><a href="javascript:void(Tawk_API.toggle())"><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></a></td>
+									<td><img src="../imgs/help_ticket.png" class="not_inicio" title="Tickets"/></td>
+									<td><img src="../imgs/help_faq.png" class="not_inicio" title="Preguntas Frecuentes"/></td>
+									<td><img src="../imgs/help_check.png" class="not_inicio" title="Verifica"/></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 	
 
     <!-- Bootstrap core JavaScript

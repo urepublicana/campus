@@ -9,16 +9,16 @@
 	$pagina = "universidad";
 	require_once("../requiere/menu.php"); ?> 
 
+
 	<div id="cabecera">
 		<div class="container">
 			<div class="row centered">
 				<div class="col-lg-8 col-lg-offset-2">
-				<h4><i class="fa fa-bookmark icon"></i>UNIVERSIDAD</h4>
+				<img src="../imgs/insignia-campus.png" width="25%">
 				</div>
-			</div><!-- row -->
-		</div><!-- container -->
-	</div><!--  bluewrap -->
-
+			</div>
+		</div>
+	</div>
 
 	<div class="container desc">
 		<div class="row">
@@ -77,4 +77,5 @@
 <!-- FOOTER -->
 	<?php require_once("../requiere/footer.php"); ?> 
   </body>
+    <script src="../assets/js/chat-pg.js"></script>
 </html>

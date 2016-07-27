@@ -4550,8 +4550,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -4676,6 +4676,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   color: #777777;
 }
 
+/* ===== HOVER MENU JJMA === */
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #333333;
@@ -4686,7 +4687,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555555;
-  background-color: #e7e7e7;
+  background-color: #transparent;
 }
 
 .navbar-default .navbar-nav > .disabled > a,
@@ -4801,15 +4802,15 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #CBCBCB;
   background-color: transparent;
 }
+
 
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #FFFFFF;
-  background-color: #119E52;
+  background-color: transparent;
 }
 
 
@@ -5992,7 +5993,7 @@ button.close {
 .modal-dialog {
   position: relative;
   z-index: 1050;
-  width: auto;
+  width: 50%;
   padding: 10px;
   margin-right: auto;
   margin-left: auto;
@@ -6092,7 +6093,7 @@ button.close {
 
 @media screen and (min-width: 768px) {
   .modal-dialog {
-    width: 600px;
+    width: 500px;
     padding-top: 30px;
     padding-bottom: 30px;
   }

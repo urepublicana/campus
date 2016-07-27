@@ -3,11 +3,12 @@ window.onscroll = function() {myFunction()};
 
 function myFunction() {
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		document.getElementById("menu_nav").style = "background-color: #8A303A !important; opacity: 0.8;";
+		document.getElementById("menu_nav").style = "background-color: rgba(163, 57, 69, .9) !important;"; 
 	} else {
 		document.getElementById("menu_nav").style = "";
 	}
 }
+
 
 // Funcion de ANIMACION Scroll
 $(window).scroll(function() {
@@ -50,12 +51,6 @@ function mostrar(id_campo, check){
 	}
 }
 
-//ZOOM
-$(window).load(function() {
-    $(document.body).css("zoom", 0.8); // zoom the page on DOMReady
-    //document.body.style.MozTransform = "scale(0.8)";
-});
-
 // Fechas
 $(function() {
 	$("#fecha_final").datepicker();
@@ -66,6 +61,11 @@ function confirmar() {
 	if (!confirm("Esta seguro que desea continuar")) return false;
 }
 
-
-
-
+function ver_check(){
+	var div_verifica =  document.getElementById("verificado");
+	if (div_verifica.style.display == "none"){
+		div_verifica.style.display = "block";
+	}else{
+		div_verifica.style.display = "none";
+	}
+}

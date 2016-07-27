@@ -34,4 +34,5 @@
 	<!-- FOOTER -->
 	<?php require_once("../requiere/footer.php"); ?> 
   </body>
+    <script src="../assets/js/chat-pg.js"></script>
 </html>

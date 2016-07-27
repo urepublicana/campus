@@ -47,3 +47,4 @@
     
     <!--FUNCIONES ADICIONALES-->
     <script src="../assets/js/funciones.js"></script>
+    <script src="../assets/js/plugins.js"></script>

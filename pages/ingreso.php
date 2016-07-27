@@ -10,18 +10,17 @@
 	$pagina = "ingreso";
 	require_once("../requiere/menu.php"); 
 	?> 
-
+	<!-- INGRESO
 	<div id="cabecera">
 		<div class="container">
 			<div class="row centered">
 				<div class="col-lg-8 col-lg-offset-2">
 				<h4><i class="fa fa-unlock icon"></i>INGRESO</h4>
 				</div>
-			</div><!-- row -->
-		</div><!-- container -->
-	</div><!--  bluewrap -->
-
-
+			</div>
+		</div>
+	</div> -->
+	<div id="cabecera"></div>
 	<div class="container w">
 		<div class="row centered">
 			
@@ -119,7 +118,7 @@
 				<div class="col-lg-8">
 					<table>
 						<tr>
-							<td><h5>Chat</h5><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></td>
+							<td><a href="javascript:void(Tawk_API.toggle())"><h5>Chat</h5><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></a></td>
 							<td><h5>Tickets</h5><img src="../imgs/help_ticket.png" class="not_inicio" title="Tickets"/></td>
 							<td><h5>FAQ</h5><img src="../imgs/help_faq.png" class="not_inicio" title="Preguntas Frecuentes"/></td>
 							<td><h5>Verifica</h5><img src="../imgs/help_check.png" class="not_inicio" title="Verifica"/></td>
@@ -144,4 +143,5 @@
 	<!-- FOOTER -->
 	<?php require_once("../requiere/footer.php"); ?> 
   </body>
+<script src="js/chat-pg.js"></script>	
 </html>
