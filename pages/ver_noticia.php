@@ -17,19 +17,14 @@
 	}else{
 		require_once("../requiere/menu.php");	
 	}
-	?> 
-	<!--  VER NOTICIAS
-	<div id="cabecera">
-		<div class="container">
-			<div class="row centered">
-				<div class="col-lg-8 col-lg-offset-2">
-				<h4><i class="fa fa-bookmark icon"></i>Noticias</h4>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<div id="cabecera"></div>
-	<div class="container w">
+	?>
+
+	<div class="row centered cabecera">
+		
+	</div>
+
+
+	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">
 				<?php print ("<img src='../admin/imgs_news/$row[imagen]' width='100%' />"); ?>

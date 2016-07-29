@@ -9,14 +9,9 @@
 	$pagina = "universidad";
 	require_once("../requiere/menu.php"); ?> 
 
-
-	<div id="cabecera">
-		<div class="container">
-			<div class="row centered">
-				<div class="col-lg-8 col-lg-offset-2">
-				<img src="../imgs/insignia-campus.png" width="25%">
-				</div>
-			</div>
+	<div class="row centered cabecera">
+		<div class="col-lg-12">
+			<img src="../imgs/campus.png" width="300">	
 		</div>
 	</div>
 

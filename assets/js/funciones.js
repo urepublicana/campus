@@ -1,9 +1,8 @@
-// Funcion SCROLL de Menu Verde = 44B78B  Rojo = 8A303A
+// Funcion SCROLL de Menu Rojo = D03954
 window.onscroll = function() {myFunction()};
-
 function myFunction() {
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		document.getElementById("menu_nav").style = "background-color: rgba(163, 57, 69, .9) !important;"; 
+		document.getElementById("menu_nav").style = "background-color: rgba(208, 57, 84, .8) !important;"; 
 	} else {
 		document.getElementById("menu_nav").style = "";
 	}

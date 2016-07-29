@@ -4451,7 +4451,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-fixed-top {
-  top: 0;
+  top: 40px;
   border-width: 0 0 1px;
 }
 
@@ -6093,7 +6093,7 @@ button.close {
 
 @media screen and (min-width: 768px) {
   .modal-dialog {
-    width: 500px;
+    width: 600px;
     padding-top: 30px;
     padding-bottom: 30px;
   }

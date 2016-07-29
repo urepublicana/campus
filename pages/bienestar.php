@@ -9,10 +9,11 @@
 	$pagina = "bienestar";
 	require_once("../requiere/menu.php"); ?> 
 
-	<div id="headerwrap">
-		<img src="../imgs/fondo1.png" width="100%">
-	</div><!-- headerwrap -->
-
+	<div class="row centered cabecera">
+		<div class="col-lg-12">
+			<img src="../imgs/bienestar.png" width="300">	
+		</div>
+	</div>
 
 	<div class="container w">
 		<div class="row">

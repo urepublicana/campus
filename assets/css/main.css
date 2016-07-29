@@ -106,6 +106,14 @@ input[type="submit"]{
     background-color: #4DB14D;
 }
 
+#menu_bar{
+  width: 80% !important;
+}
+
+.efecto_menu{
+  background-color: transparent !important; 
+}
+
 .navbar {
 	font-weight: 600;
 	font-size: 16px;
@@ -115,7 +123,7 @@ input[type="submit"]{
 
 /* ==== MENU ESTILO JJMA == */
 .navbar-inverse {
-	background-color: transparent; 
+	background-color: #D03954; 
 	border-color: transparent;
 }
 
@@ -200,12 +208,29 @@ input[type="submit"]{
 /* ==========================================================================
    BANNER ESTILO
    ========================================================================== */
+.redes{
+  background-color: transparent;
+  top: 0px;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  padding-left: 50px;
+}
+.redes a{
+  color: #333E50 !important;
+  padding: 20px;
+  font-size: 20px;
+}
+.redes a:hover{
+  font-size: 25px;
+}
+
 
 #headerwrap {
-	background-color: #trasnparent;
 	background-attachment: relative;
 	background-position: center center;
 	width: 100%;
+  text-align: center;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -217,24 +242,24 @@ input[type="submit"]{
     background-size: cover;
 }
 
+.texto_banner{
+  position: absolute;
+  top: 15%;
+  left: 20%;
+}
+@media (max-width: 992px){
+  .texto_banner{
+    display: none;
+  }
+}
+
 #headerwrap h1 {
-	margin-top: 200px;
 	color: white;
-	font-size: 65px;
+	font-size: 400%;
 	font-weight: 350;
-	text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
 	letter-spacing: 2px;
 	text-align:left !important;
 }
-
-#headerwrap h2 {
-	color: white;
-	font-size: 40px;
-	font-weight: 700;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-}
-
 /* ESTILO ZONA MAS OSCURA */
 
 #dg {
@@ -279,24 +304,10 @@ input[type="submit"]{
 
 /* ======== ESTILO CABECERA JJMA */
 
-#cabecera {
-    background-color: #A33945;
-    padding-top: 5%;
-    margin-bottom: 20px;
-    height: 280px;
-}
-
-#cabecera h4 {
-	color: white;
-	font-weight: 700;
-}
-
-.logo_bajo{
-    font-size: 150px;
-}
-
-#cabecera p {
-	color: white;
+.cabecera {
+    background-color: transparent;
+    padding-top: 180px;
+    padding-bottom: 20px;
 }
 
 
@@ -304,7 +315,7 @@ input[type="submit"]{
 /* ============== FOOTER ESTILO */
 #f {
 	font-family: "Lato";
-	background: #3A3A3A;
+	background: #333E50;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	margin-bottom: 0px;
@@ -326,18 +337,17 @@ input[type="submit"]{
 }
 
 #f a:hover{
-	color: #A33945;
+	color: #D03954;
 }
 
-
 #f i {
-	color: #bdbdbd;
+	color: #FFFFFF;
 	font-size: 30px;
 	padding: 20px;
 }
 
 #f i:hover {
-	color: #A33945;
+	color: #D03954;
 }
 
 /****** SECTIONS *****/

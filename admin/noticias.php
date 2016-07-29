@@ -11,23 +11,16 @@
 	$pagina = "admin_noticias";
 	require_once("../requiere/menu_admin.php"); ?>
 
-	<div id="cabecera">
-		<div class="container">
-			<div class="row centered">
-				<div class="col-lg-8 col-lg-offset-2">
-					<h4><i class="fa fa-comments icon"></i>GESTION DE NOTICIAS</h4>
-				</div>
-			</div><!-- row -->
-		</div><!-- container -->
-	</div><!-- CABECERA -->
-
+	<div class="row centered cabecera">
+		<div class="col-lg-12">
+			<img src="../imgs/administrador.png" width="300px">	
+		</div>
+	</div>
 
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-
 				<a class="noticia_new" data-toggle="modal" data-target="#nueva_noticia" href="#nueva_noticia"><i class="fa fa-paperclip icon"></i>Agregar Noticia</a>
-
 				<table width="100%" cellpadding="10">
 					<tr>
 						<td><h4>IMAGEN</h4></td>
@@ -44,7 +37,8 @@
 						$clase = "";
 						/* obtener un array asociativo */
 						while ($row = $resultado->fetch_assoc()) {
-							print ("<tr>
+							print ("
+							<tr>
 								<td align='center'><img class='not_inicio img-circle' src='../admin/imgs_news/$row[imagen]'></td>
 								<td><a href='../pages/ver_noticia.php?id=$row[id_noticia]&pagina=admin_noticias'>$row[titular]</a></td>
 								<td>$row[resumen]</td>

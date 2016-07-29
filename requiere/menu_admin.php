@@ -1,6 +1,6 @@
     <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top" id="menu_nav">
-      <div class="container">
+      <div class="container" id="menu_bar">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>

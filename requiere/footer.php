@@ -1,4 +1,4 @@
-<br><br>
+
 	<div id="f">
 		<div class="container">
 				<div class="col-lg-4">
@@ -93,7 +93,7 @@
 						<div class="col-lg-12">
 							<table width="80%">
 								<tr>
-									<td><a href="javascript:void(Tawk_API.toggle())"><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></a></td>
+									<td><a href="javascript:void(Tawk_API.toggle())" ><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></a></td>
 									<td><img src="../imgs/help_ticket.png" class="not_inicio" title="Tickets"/></td>
 									<td><img src="../imgs/help_faq.png" class="not_inicio" title="Preguntas Frecuentes"/></td>
 									<td><img src="../imgs/help_check.png" class="not_inicio" title="Verifica"/></td>

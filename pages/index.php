@@ -12,18 +12,10 @@
 	require_once("../requiere/menu.php"); ?> 
 
 	<div id="headerwrap">
-		
 		<img src="../imgs/fondo3.png" width="100%">
-		
-		<!--
-		<div class="container">
-			<div class="row centered">
-				<div class="col-lg-12 col-lg-offset-1">
-					<h1><b>CAMPUS VIRTUAL</b></h1>
-				</div>
-			</div>
-		</div> container -->
-		
+		<div class="texto_banner">
+			<h1>Nuestro Compromiso <b>La Etica</b></h1>
+		</div>
 	</div><!-- headerwrap -->
 	
 
@@ -70,13 +62,10 @@
 								$resultado->free();
 							}
 				?>
-				<br>
 			</div><!-- row -->
 		</div><!-- container -->
 	</div><!-- DG -->
-	
 
-	
 	<!-- FOOTER -->
 	<?php require_once("../requiere/footer.php"); ?> 
   </body>
