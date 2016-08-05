@@ -1,3 +1,8 @@
+    <div id="redes" class="redes">
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-google-plus"></i></a>
+    </div>
     <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top" id="menu_nav">
       <div class="container" id="menu_bar">

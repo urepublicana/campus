@@ -30,6 +30,9 @@
     
 	<!-- ANIMACIONES DE SCROLL -->
     <link href="../assets/css/animacion.css" rel="stylesheet">
+
+    <!-- MATERIALIZE-->
+    <link href="../assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/> 
 	
 
 

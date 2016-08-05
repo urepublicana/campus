@@ -688,7 +688,6 @@ abbr.initialism {
 blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
-  border-left: 5px solid #eeeeee;
 }
 
 blockquote p {
@@ -794,7 +793,8 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .container:before,
@@ -4451,7 +4451,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-fixed-top {
-  top: 40px;
+  top: 30px;
   border-width: 0 0 1px;
 }
 
@@ -4513,8 +4513,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   line-height: 20px;
 }
 
@@ -4550,8 +4550,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 

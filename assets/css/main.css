@@ -42,6 +42,14 @@ p {
     text-align: center;
 }
 
+.mostrar{
+  display: block;
+}
+
+.ocultar{
+  display: none;
+}
+
 /* Links */
 a {
     color: #A14A52;
@@ -107,7 +115,7 @@ input[type="submit"]{
 }
 
 #menu_bar{
-  width: 80% !important;
+  width: 90% !important;
 }
 
 .efecto_menu{
@@ -115,13 +123,14 @@ input[type="submit"]{
 }
 
 .navbar {
-	font-weight: 600;
-	font-size: 16px;
-	padding-top: 30px;
+	font-weight: 400;
+	font-size: 12px !important;
+	padding-top: 10px;
 }
 
 
 /* ==== MENU ESTILO JJMA == */
+
 .navbar-inverse {
 	background-color: #D03954; 
 	border-color: transparent;
@@ -137,7 +146,10 @@ input[type="submit"]{
 }
 
 .navbar-inverse .navbar-nav > .active > a:hover {
-  border-bottom: 5px solid white;
+  border-bottom: 4px solid white;
+}
+.navbar-inverse .navbar-nav > .ingreso{
+  padding-left: 20px;  
 }
 
 .navbar-inverse .navbar-nav > .ingreso > a {
@@ -170,6 +182,59 @@ input[type="submit"]{
 
 .icon{
 	padding-right: 7px;
+}
+
+/*ESTILO DE TESTIMONIOS*/
+
+.autor-testimonio {
+    color: #999;
+    text-align:left;
+    font-size: 13px ;
+    font-style: italic;
+    color: #666;
+}
+.autor-testimonio img {
+  float: left;
+  padding: 5px;
+  width: 55px;
+}
+
+.fecha-abajo {
+    width: 0;
+    height: 0;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #F2F2F2;
+    margin: 0 0 0 25px;
+}
+.testimonio {
+    margin: 0;
+    background: #F2F2F2;
+    padding: 10px 50px;
+    position: relative;
+    font-family: Georgia, serif;
+    color: #666;
+    border-radius: 5px;
+    font-style: italic;
+    text-align: justify;
+}
+ 
+.testimonio:before, .testimonio:after {
+    content: "\201C";
+    position: absolute;
+    font-size: 80px;
+    line-height: 1;
+    color: #999;
+    font-style: normal;
+}
+ 
+.testimonio:before {
+    top: 0;
+    left: 10px;
+}
+.testimonio:after {
+    content: "\201D";
+    right: 10px;
+    bottom: -0.5em;
 }
 
 
@@ -212,23 +277,31 @@ input[type="submit"]{
   background-color: transparent;
   top: 0px;
   position: fixed;
-  height: 40px;
+  height: 30px;
   width: 100%;
   padding-left: 50px;
+  padding-top: 5px;
+  z-index: 1000;
 }
 .redes a{
   color: #333E50 !important;
-  padding: 20px;
-  font-size: 20px;
+  padding: 10px !important;
+  font-size: 16px;
 }
-.redes a:hover{
-  font-size: 25px;
+.redes .facebook:hover{
+  color: #3B5998 !important;
 }
 
+.redes .twitter:hover{
+  color: #659FCB !important;
+}
+
+.redes .google:hover{
+  color: #E04A39 !important;
+}
 
 #headerwrap {
-	background-attachment: relative;
-	background-position: center center;
+  position: relative;
 	width: 100%;
   text-align: center;
     -webkit-background-size: 100%;
@@ -240,12 +313,26 @@ input[type="submit"]{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    z-index: 0;
+}
+
+.capa{
+  position: absolute;
+  vertical-align: middle;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background-color:#000;
+  opacity:0.15;
+  filter:alpha(opacity=15);
 }
 
 .texto_banner{
   position: absolute;
-  top: 15%;
-  left: 20%;
+  top: 30%;
+  z-index:1;
+  width:100%;
 }
 @media (max-width: 992px){
   .texto_banner{
@@ -255,11 +342,69 @@ input[type="submit"]{
 
 #headerwrap h1 {
 	color: white;
-	font-size: 400%;
-	font-weight: 350;
+	font-size: 250%;
+	font-weight: 250;
 	letter-spacing: 2px;
-	text-align:left !important;
+  text-shadow: 1px 1px 8px #000;
 }
+
+.no_ver{
+  display: none;
+}
+
+
+
+/* ======== AYUDA====== */
+
+#verificado{
+  margin-top: 50px;
+  border-top: 1px solid #E0E0E0;
+  font-size: 13px;
+}
+
+
+
+.img_ayuda{
+  width: 50%;
+}
+
+.green{
+color: green;
+}
+
+.red{
+color: red;
+}
+
+
+
+
+/* ANIMACIONES */ 
+.globo1{
+  position: absolute;
+  top: 15%;
+  width: 5%;
+  background: transparent;
+  -moz-animation:miAnimacion 35s infinite alternate; /*Firefox */
+  -webkit-animation:miAnimacion 35s infinite alternate; /* Safari & Chrome */
+}
+
+/* Firefox */
+@-moz-keyframes miAnimacion{
+  from {left:-10%;}
+  40%  { top: 60%;}
+  to {left:90%;}
+}
+/* Safari & Chrome */
+@-webkit-keyframes miAnimacion{
+  from {left:-10%;}
+  40%  { top: 60%;}
+  to {left:90%;}
+}
+
+
+
+
 /* ESTILO ZONA MAS OSCURA */
 
 #dg {
@@ -314,41 +459,53 @@ input[type="submit"]{
 
 /* ============== FOOTER ESTILO */
 #f {
-	font-family: "Lato";
 	background: #333E50;
 	padding-top: 30px;
-	padding-bottom: 30px;
 	margin-bottom: 0px;
+  vertical-align: middle;
+}
+
+#f h4{
+  color: white !important;
+  padding-bottom: 7px;
+}
+
+#f img{
+  border-right: 1px solid #3B485D;
+  padding-right: 40px;
 }
 
 #f li{
-	padding-bottom: 10px;
-	font-size: 20px;
+	padding-bottom: 5px;
+	font-size: 13px;
 }
 
+/* ICONOS FOOTER*/ 
 #f span{
-	color: #A33945;
+	color: #FF5F7C;
+  font-size: 20px;
 }
 
-
+/* TEXTO */ 
 #f a{
+  font-size: 12px;
+  font-family: "Lato" !important; 
 	color: #FFFFFF;
-	padding-left: 15px;
+	padding-left: 5px;
 }
 
 #f a:hover{
-	color: #D03954;
+  font-family: "Lato" !important; 
+	color: #E0E0E0;
 }
 
-#f i {
-	color: #FFFFFF;
-	font-size: 30px;
-	padding: 20px;
+.footer_down{
+  background-color: #3B485D;
+  color: white;
+  font-size: 16px;
+  padding: 6px;
 }
 
-#f i:hover {
-	color: #D03954;
-}
 
 /****** SECTIONS *****/
 

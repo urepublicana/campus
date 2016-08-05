@@ -1,26 +1,46 @@
 
-	<div id="f">
+<div id="f">
+	<div class="row">
 		<div class="container">
-				<div class="col-lg-4">
-					<ul class="nav">
-						<li><span class="fa fa-dribbble"/><a href="index.php">Pagina Principal</a></li>
-						<li><span class="fa fa-book"/><a href="index.php">Biblioteca</a></li>
-						<li><span class="fa fa-coffee"/><a href="index.php">Otra</a></li>
-						<li><span class="fa fa-lock"/><a href="../admin/index.php">Administrar</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-4 centered">
-					<img src="../imgs/logo.png" width="50%">
-				</div>
-				<div class="col-lg-4 rigthed">
-					<a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-info-circle"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-google-plus"></i></a>
-				</div>
+			<div class="col-sm-3 centered">
+				<img src="../imgs/logo.png" width="90%">
+			</div>
+			<div class="col-sm-3 lefted">
+			<h4>Oferta Academica</h4>
+				<ul class="nav">
+					<li><span class="fa fa fa-angle-right"/><a href="#">Programas Presenciales</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="#">Programas Virtuales</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="#">Admisiones</a></li>
+					<li><span class="fa fa fa-angle-right"/><a data-toggle="modal" data-target="#Contacto" href="#Contacto">Contactenos</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-3 lefted">
+			<h4>Sitios de Interes</h4>
+				<ul class="nav">
+					<li><span class="fa fa fa-angle-right"/><a href="#">AVACUR</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="#">Sistema Academico</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="#">Republicana Radio</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="#">Biblioteca</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="#">Centro de Investigaciones</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="#">Consultorio Juridico</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="#">Escuela de Altos Estudios</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-3 lefted">
+			<h4>Otros</h4>
+				<ul class="nav">
+					<li><span class="fa fa fa-angle-right"/><a href="#">Trabaje con nosotros</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="#">Oficina de Egresados</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="#">Ley de Protección de Datos</a></li>
+					<li><span class="fa fa fa-angle-right"/><a href="../admin/index.php">Administrar</a></li>
+				</ul>
+			</div>
 		</div><!-- container -->
-	</div><!-- Footer -->
-
+	</div>
+</div><!-- Footer -->
+<div class="footer_down centered">
+	Copyright &copy; 2016 - Corporacion Universitaria Republicana
+</div>
 
 	<?php 
 	//CERRAR CONEXION
@@ -28,7 +48,7 @@
 	?>
 	<!-- MODAL FOR CONTACT -->
 	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="Contacto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -122,4 +142,10 @@
 	http://code.jquery.com/jquery-1.10.1.min.js
 	-->
     <script src="../assets/js/bootstrap.min.js"></script>
+     <script src="../assets/js/materialize.js"></script>
+    <!--
+    <script src="../assets/js/jquery-2.1.1.min.js"></script>
+   
+    -->
+
     

@@ -9,40 +9,47 @@
 	$pagina = "ayuda";
 	require_once("../requiere/menu.php"); ?> 
 	
-
-
 		<div class="row centered cabecera">
-			<div class="col-lg-12">
-				<img src="../imgs/ayuda.png" width="300px">	
-			</div>
 		</div>
 
-		<div class="row centered">
-			<div class="col-lg-3" >
-				<h2>CHAT</h2>
-				<a href="javascript:void(Tawk_API.toggle())">
-				<img src="../imgs/help_chat.png" width="25%" />
-				</a>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+		<div class="row">
+			<div class="col-sm-1" >
+			</div>
+
+			<div class="col-sm-3 lefted" >
+				<img src="../imgs/ayuda.png" width="90%">	
 			</div><!-- col-lg-4 -->
 			
-			<div class="col-lg-3">
-				<h2>TICKETS</h2>
-				<img src="../imgs/help_ticket.png" width="25%" />
+			<div class="col-sm-7 lefted">
+				<h2>Mesa de Ayuda</h2>
 				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+				<div class="centered">
+					<div class="col-sm-3" >
+						<h6><BR>CHAT</h6>
+						<a href="javascript:void(Tawk_API.toggle())">
+						<img src="../imgs/help_chat.png" class="img_ayuda" />
+						</a>
+					</div><!-- col-lg-4 -->
+					<div class="col-sm-3">
+						<h6><BR>TICKETS</h6>
+						<img src="../imgs/help_ticket.png" class="img_ayuda" />
+					</div><!-- col-lg-4 -->
+
+					<div class="col-sm-3">
+						<h6>PREGUNTAS FRECUENTES</h6>
+						<img src="../imgs/help_faq.png" class="img_ayuda"/>
+					</div><!-- col-sm-4 -->
+
+					<div class="col-sm-3">
+						<h6>VERIFICA TU SISTEMA</h6>
+						<a href="#" onclick="ver_check()"> <img src="../imgs/help_check.png" class="img_ayuda" /> </a>
+					</div><!-- col-lg-4 -->
+				</div><!-- row -->
+
 			</div><!-- col-lg-4 -->
 
-			<div class="col-lg-3">
-				<h2>FAQ</h2>
-				<img src="../imgs/help_faq.png" width="25%" />
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-			</div><!-- col-lg-4 -->
-
-			<div class="col-lg-3">
-				<h2>VERIFICA</h2>
-				<a href="#" onclick="ver_check()"> <img src="../imgs/help_check.png" width="25%" /> </a>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-			</div><!-- col-lg-4 -->
+			<div class="col-sm-1" >
+			</div>
 		</div><!-- row -->
 
 
@@ -53,7 +60,7 @@
 			
 			<div class="col-lg-8" id="verificado" style="display: none;">
 				<h2>Sistema Verificado</h2>
-				<table width="100%" cellpadding="10">
+				<table width="90%" cellpadding="25">
 					<tr>
 					<script type="text/javascript">
 					//NAVEGADOR
@@ -62,54 +69,54 @@
 											"<a href='#'><i class='fa fa-cloud-download'></i> Descargar Google Chrome</a>";
 					var navegador = navigator.userAgent;
 					if (navigator.userAgent.indexOf('MSIE') !=-1) {
-					document.write("<img src='../imgs/explorer.png' width='40%' /><h3><i class='fa fa-minus-circle'></i> Explorer</h3>"+recomendacion_nav);
+					document.write("<img src='../imgs/explorer.png' class='img_ayuda' /><h5><i class='fa fa-minus-circle red'></i> Explorer</h5>"+recomendacion_nav);
 					} 
 					else if (navigator.userAgent.indexOf('Firefox') !=-1) {
-					document.write("<img src='../imgs/firefox.png' width='40%' /><h3>Firefox  <i class='fa fa-check-circle green'></i></h3>");
+					document.write("<img src='../imgs/firefox.png' class='img_ayuda' /><h5>Firefox  <i class='fa fa-check-circle green'></i></h5>");
 					} 
 					else if (navigator.userAgent.indexOf('Chrome') !=-1) {
-					document.write("<img src='../imgs/chrome.png' width='40%' /><h3>Google Chrome <i class='fa fa-check-circle green'></i></h3>");
+					document.write("<img src='../imgs/chrome.png' class='img_ayuda' /><h5>Google Chrome <i class='fa fa-check-circle green'></i></h5>");
 					} 
 					else if (navigator.userAgent.indexOf('Opera') !=-1) {
-					document.write("<img src='../imgs/opera.png' width='40%' /><h3><i class='fa fa-minus-circle'></i> Opera <h3>"+recomendacion_nav);
+					document.write("<img src='../imgs/opera.png' class='img_ayuda' /><h5><i class='fa fa-minus-circle red'></i> Opera <h5>"+recomendacion_nav);
 					} 
 					else {
-					document.write("<img src='../imgs/desconocido.png' width='40%'/><h3><i class='fa fa-minus-circle'></i> Navegador desconocido </h3>"+recomendacion_nav);
+					document.write("<img src='../imgs/desconocido.png' class='img_ayuda' /><h5><i class='fa fa-minus-circle red'></i> Navegador desconocido </h5>"+recomendacion_nav);
 					}
 					document.write("</td>");
 
 					
 					//JAVA
 					var recomendacion_java = "<a href='#'><i class='fa fa-cloud-download'></i> Descargar Java</a> <br>";
-					document.write("<td valign='top' align='center' width='25%'><img src='../imgs/java.png' width='40%' />");
+					document.write("<td valign='top' align='center' width='25%'><img src='../imgs/java.png' class='img_ayuda' />");
 					if (pluginlist.indexOf("Java")!=-1){
-						document.write("<h3>Java <i class='fa fa-check-circle'></i></h3>");
+						document.write("<h5>Java <i class='fa fa-check-circle green'></i></h5>");
 					}
 					else{
-						document.write("<h3>Recomendamos Instalar Java <i class='fa fa-minus-circle'></i></h3>"+recomendacion_java);
+						document.write("<h5>Recomendamos Instalar Java <i class='fa fa-minus-circle red'></i></h5>"+recomendacion_java);
 					}
 					document.write("</td>");
 
 
 					//FLASH
 					var recomendacion_flash = "<a href='#'><i class='fa fa-cloud-download'></i> Descargar Flash</a> <br>";
-					document.write("<td valign='top' align='center' width='25%'><img src='../imgs/flash.png' width='40%' />");
+					document.write("<td valign='top' align='center' width='25%'><img src='../imgs/flash.png' class='img_ayuda' />");
 					if (pluginlist.indexOf("Flash")!=-1){
-						document.write("<h3>Flash <i class='fa fa-check-circle'></i></h3>");
+						document.write("<h5>Flash <i class='fa fa-check-circle green'></i></h5>");
 					}
 					else{
-						document.write("<h3>Recomendamos Instalar Flash <i class='fa fa-minus-circle'></i></h3>"+recomendacion_flash);
+						document.write("<h5>Recomendamos Instalar Flash <i class='fa fa-minus-circle red'></i></h5>"+recomendacion_flash);
 					}
 					document.write("</td>");
 
 					//PDF
 					var recomendacion_pdf = "<a href='#'><i class='fa fa-cloud-download'></i> Descargar Acrobat Reader</a> <br>";
-					document.write("<td valign='top' align='center' width='25%'><img src='../imgs/pdf.png' width='40%' />");
+					document.write("<td valign='top' align='center' width='25%'><img src='../imgs/pdf.png' class='img_ayuda' />");
 					if (pluginlist.indexOf("Acrobat Reader")!=-1){
-						document.write("<h3>Acrobat Reader <i class='fa fa-check-circle'></i></h3>");
+						document.write("<h5>Acrobat Reader <i class='fa fa-check-circle green'></i></h5>");
 					}
 					else{
-						document.write("<h3>Recomendamos Instalar Acrobat Reader <i class='fa fa-minus-circle'></i></h3>"+recomendacion_pdf);
+						document.write("<h5>Recomendamos Instalar Acrobat Reader <i class='fa fa-minus-circle red'></i></h5>"+recomendacion_pdf);
 					}
 					document.write("</td>");
 					</script>
