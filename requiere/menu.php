@@ -7,10 +7,19 @@
      ?>
      
     <div id="redes" class="redes">
-      <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-      <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-      <a class="google" href="#"><i class="fa fa-google-plus"></i></a>
+      <div class="col-xs-1"></div>
+      <div class="col-xs-5 lefted">
+        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+        <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+        <a class="google" href="#"><i class="fa fa-google-plus"></i></a>
+      </div>
+      <div class="col-xs-5 rigthed">
+        <a class="tooltipped" data-position="bottom" data-delay="40" data-tooltip="Emisora" href="#"><img src="../imgs/radio.png" ></a>
+        <a class="tooltipped" data-position="bottom" data-delay="40" data-tooltip="Correo" href="#"><img src="../imgs/email.png" ></a>
+      </div>
+      <div class="col-xs-1"></div>
     </div>
+
 
     <div class="navbar navbar-inverse navbar-fixed-top <?php echo $style; ?>" id="menu_nav" style="">
       <div class="container" id="menu_bar">

@@ -2,11 +2,11 @@
 window.onscroll = function() {myFunction()};
 function myFunction() {
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		document.getElementById("menu_nav").style = "background-color: #D03954 !important;"; 
-		document.getElementById("redes").style = "background-color: #F2F2F2 !important;"; 
+		$("#menu_nav").addClass("menu_scroll");
+		$("#redes").addClass("redes_scroll");
 	} else {
-		document.getElementById("menu_nav").style = "";
-		document.getElementById("redes").style = "";
+		$("#menu_nav").removeClass("menu_scroll");
+		$("#redes").removeClass("redes_scroll");
 	}
 }
 
@@ -73,23 +73,37 @@ function confirmar() {
 	if (!confirm("Esta seguro que desea continuar")) return false;
 }
 
+
+// AYUDA 
 function ver_check(){
-	var div_verifica =  document.getElementById("verificado");
-	if (div_verifica.style.display == "none"){
-		div_verifica.style.display = "block";
-	}else{
-		div_verifica.style.display = "none";
-	}
+	$("#verificado").removeClass("ocultar").addClass("mostrar slideUp");
+	$('html, body').stop().animate({
+		scrollTop: jQuery("#botones").offset().top
+	}, 1500);
+}
+
+
+function campus(){
+	//var div_enlaces =  document.getElementById("enlaces_campus");
+	$("#enlaces_campus").removeClass("ocultar").addClass("mostrar fadeIn");
+	$('html, body').stop().animate({
+		scrollTop: jQuery("#img_campus").offset().top
+	}, 1500);
+	//alert("esta")
 }
 
 $(document).ready(function() {
     $('.ancla').click(function(){
         var link = $(this);
         var anchor  = link.attr('href');
-        $(anchor).removeClass( "ocultar" ).addClass( "mostrar" );
+         $('.cont_campus').addClass( "ocultar" );
+        $(anchor).removeClass( "ocultar" ).addClass( "mostrar espacio" );
         $('html, body').stop().animate({
             scrollTop: jQuery(anchor).offset().top
         }, 1500);
         return false;
     });
 });
+
+
+

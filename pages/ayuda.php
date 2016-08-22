@@ -13,34 +13,34 @@
 		</div>
 
 		<div class="row">
+		<h2 class="centered">Mesa de Ayuda</h2>
 			<div class="col-sm-1" >
 			</div>
 
-			<div class="col-sm-3 lefted" >
-				<img src="../imgs/ayuda.png" width="90%">	
+			<div class="col-sm-3 lefted centrar_vert">
+				<img src="../imgs/ayuda.png" class="logo_ayuda">	
 			</div><!-- col-lg-4 -->
 			
-			<div class="col-sm-7 lefted">
-				<h2>Mesa de Ayuda</h2>
+			<div class="col-sm-7 lefted" id="botones">
 				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
 				<div class="centered">
-					<div class="col-sm-3" >
+					<div class="col-xs-3" >
 						<h6><BR>CHAT</h6>
 						<a href="javascript:void(Tawk_API.toggle())">
 						<img src="../imgs/help_chat.png" class="img_ayuda" />
 						</a>
 					</div><!-- col-lg-4 -->
-					<div class="col-sm-3">
+					<div class="col-xs-3">
 						<h6><BR>TICKETS</h6>
 						<img src="../imgs/help_ticket.png" class="img_ayuda" />
 					</div><!-- col-lg-4 -->
 
-					<div class="col-sm-3">
+					<div class="col-xs-3">
 						<h6>PREGUNTAS FRECUENTES</h6>
 						<img src="../imgs/help_faq.png" class="img_ayuda"/>
-					</div><!-- col-sm-4 -->
+					</div><!-- col-xs-4 -->
 
-					<div class="col-sm-3">
+					<div class="col-xs-3">
 						<h6>VERIFICA TU SISTEMA</h6>
 						<a href="#" onclick="ver_check()"> <img src="../imgs/help_check.png" class="img_ayuda" /> </a>
 					</div><!-- col-lg-4 -->
@@ -58,9 +58,9 @@
 			<div class="col-lg-2" >
 			</div><!-- col-lg-4 -->
 			
-			<div class="col-lg-8" id="verificado" style="display: none;">
+			<div class="col-lg-8 ocultar" id="verificado">
 				<h2>Sistema Verificado</h2>
-				<table width="90%" cellpadding="25">
+				<table width="80%" cellpadding="10">
 					<tr>
 					<script type="text/javascript">
 					//NAVEGADOR

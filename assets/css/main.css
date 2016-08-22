@@ -89,15 +89,14 @@ a:after {
 input[type="text"], 
 input[type="password"],
 input[type="submit"]{
-    display: inline-block;
+  display: inline-block;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   padding: 10px;
   border: 1px solid #b7b7b7;
-  -webkit-border-radius: 12px;
-  border-radius: 12px;
-  font: normal 17px/normal "Trebuchet MS", Helvetica, sans-serif;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   color: rgba(0,0,0,1);
   text-align: left;
   -o-text-overflow: clip;
@@ -112,6 +111,7 @@ input[type="submit"]{
 input[type="submit"]{
     color: white;
     background-color: #4DB14D;
+    text-align: center;
 }
 
 #menu_bar{
@@ -131,6 +131,15 @@ input[type="submit"]{
 
 /* ==== MENU ESTILO JJMA == */
 
+.menu_scroll{
+  background-color: #D03954 !important;
+}
+
+.redes_scroll{
+  background-color: #F2F2F2 !important;
+}
+
+
 .navbar-inverse {
 	background-color: #D03954; 
 	border-color: transparent;
@@ -142,14 +151,15 @@ input[type="submit"]{
 
 .navbar-inverse .navbar-nav > .active > a {
   background: transparent;
-  border-bottom: 3px solid white;
+  border-bottom: 1px solid white;
 }
 
 .navbar-inverse .navbar-nav > .active > a:hover {
-  border-bottom: 4px solid white;
+  border-bottom: 2px solid white;
 }
 .navbar-inverse .navbar-nav > .ingreso{
-  padding-left: 20px;  
+  padding-left: 10px;
+  padding-right: 10px;  
 }
 
 .navbar-inverse .navbar-nav > .ingreso > a {
@@ -270,6 +280,7 @@ input[type="submit"]{
     -moz-box-shadow: 3px 9px 7px -8px rgba(0,0,0,0.83);
     box-shadow: 3px 9px 7px -8px rgba(0,0,0,0.83);
 }
+
 /* ==========================================================================
    BANNER ESTILO
    ========================================================================== */
@@ -279,15 +290,22 @@ input[type="submit"]{
   position: fixed;
   height: 30px;
   width: 100%;
-  padding-left: 50px;
   padding-top: 5px;
   z-index: 1000;
 }
 .redes a{
   color: #333E50 !important;
-  padding: 10px !important;
   font-size: 16px;
+  margin: 0px 15px 0px 15px;
 }
+
+.redes img{
+  width: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+
+
 .redes .facebook:hover{
   color: #3B5998 !important;
 }
@@ -299,6 +317,8 @@ input[type="submit"]{
 .redes .google:hover{
   color: #E04A39 !important;
 }
+
+
 
 #headerwrap {
   position: relative;
@@ -376,7 +396,48 @@ color: green;
 color: red;
 }
 
+.logo_ayuda{
+  width: 110%;
+  padding-top: 5%;
+}
 
+/* ========== MI CAMPUS */
+
+.pavimento{
+  background-color: red !important;
+}
+
+.espacio{
+  padding-top: 110px !important; 
+}
+
+#enlaces_campus{
+  font-weight: 2px; 
+}
+
+#enlaces_campus li{
+  padding: 3px;
+}
+
+#enlaces_campus li span{
+  color: #333E50;
+}
+
+#enlaces_campus li span a{
+  font-family: "Lato" !important;
+  padding-left: 3px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+#enlaces_campus li span a:hover{
+  text-decoration: none;
+  color: #D03954;
+}
+
+.campo{
+   /* background: url(../../imgs/fondo.png) repeat-x center top; */
+}
 
 
 /* ANIMACIONES */ 
@@ -408,7 +469,7 @@ color: red;
 /* ESTILO ZONA MAS OSCURA */
 
 #dg {
-	background: #e0e0e0;
+	background: #E3E3E3;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	text-align: center;
@@ -471,7 +532,6 @@ color: red;
 }
 
 #f img{
-  border-right: 1px solid #3B485D;
   padding-right: 40px;
 }
 
@@ -502,7 +562,7 @@ color: red;
 .footer_down{
   background-color: #3B485D;
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   padding: 6px;
 }
 
@@ -547,6 +607,11 @@ color: red;
 }
 
 /***** MODAL CONTACT *****/
+
+.modal_ingreso{
+  width: 400px !important;
+}
+
 .modal-content {
 	border-radius: 0px;
 
@@ -563,10 +628,10 @@ color: red;
 
 .modal-body {
 	background: #f2f2f2;
-    font-family: "Lato";
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
 }
 
 .modal-footer {

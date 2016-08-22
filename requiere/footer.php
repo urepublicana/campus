@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="container">
 			<div class="col-sm-3 centered">
-				<img src="../imgs/logo.png" width="90%">
+				<img src="../imgs/logo.png" width="80%">
 			</div>
 			<div class="col-sm-3 lefted">
 			<h4>Oferta Academica</h4>
@@ -82,7 +82,7 @@
 
 	<!-- MODAL INGRESO -->
 	<div class="modal fade" id="Ingreso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal_ingreso">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -111,12 +111,14 @@
 						</form>
 						<h3>¿NECESITAS AYUDA?</h3>
 						<div class="col-lg-12">
-							<table width="80%">
+							<table width="90%">
 								<tr>
-									<td><a href="javascript:void(Tawk_API.toggle())" ><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></a></td>
-									<td><img src="../imgs/help_ticket.png" class="not_inicio" title="Tickets"/></td>
-									<td><img src="../imgs/help_faq.png" class="not_inicio" title="Preguntas Frecuentes"/></td>
-									<td><img src="../imgs/help_check.png" class="not_inicio" title="Verifica"/></td>
+									<td><a class="tooltipped" data-position="top" data-delay="40" data-tooltip="Chat" href="javascript:void(Tawk_API.toggle())" ><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></a></td>
+									<td><a class="tooltipped" data-position="top" data-delay="40" data-tooltip="Mesa de ayuda"><img src="../imgs/help_ticket.png" class="not_inicio"/></a></td>
+								</tr>
+								<tr>
+									<td><a class="tooltipped" data-position="top" data-delay="40" data-tooltip="Preguntas frecuentes"><img src="../imgs/help_faq.png" class="not_inicio"/></a></td>
+									<td><a class="tooltipped" data-position="top" data-delay="40" data-tooltip="Verifica tu sistema" href="../pages/ayuda.php"><img src="../imgs/help_check.png" class="not_inicio"/></td>
 								</tr>
 							</table>
 						</div>
