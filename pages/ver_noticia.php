@@ -39,7 +39,7 @@
 		<div class="row">
 			<div class="col-lg-10">
 				<?php print("<br><p>$row[noticia]</p>"); ?>
-				<?php print("<br><sub>Publicada el: $row[fecha_publicacion]</sub>"); ?>
+				<?php print("<br><sub class='publicacion'>Publicada el: $row[fecha_publicacion]</sub>"); ?>
 			</div>
 		</div>
 		<br>

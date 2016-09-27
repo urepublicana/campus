@@ -22,7 +22,7 @@
 			</div><!-- col-lg-4 -->
 			
 			<div class="col-sm-7 lefted" id="botones">
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+				<p>Aquí encuentras la solución a tus dudas y posibles inconvenientes, contamos con un equipo técnico especializado en atender todo tipo de requerimientos para mejorar tu experiencia en la educación virtual. </p>
 				<div class="centered">
 					<div class="col-xs-3" >
 						<h6><BR>CHAT</h6>
@@ -32,7 +32,9 @@
 					</div><!-- col-lg-4 -->
 					<div class="col-xs-3">
 						<h6><BR>TICKETS</h6>
+						<a href="../soporte/" target="_blank">
 						<img src="../imgs/help_ticket.png" class="img_ayuda" />
+						</a>
 					</div><!-- col-lg-4 -->
 
 					<div class="col-xs-3">

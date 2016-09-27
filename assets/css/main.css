@@ -132,17 +132,21 @@ input[type="submit"]{
 /* ==== MENU ESTILO JJMA == */
 
 .menu_scroll{
-  background-color: #D03954 !important;
+  /*background-color: #D02438 !important;*/
+  background-color: #D02438 !important;
 }
 
 .redes_scroll{
   background-color: #F2F2F2 !important;
 }
 
-
 .navbar-inverse {
-	background-color: #D03954; 
+	background-color: #D02438; 
 	border-color: transparent;
+}
+
+#img_index{
+	margin: 0px 5px 0px 5px;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover{
@@ -194,6 +198,11 @@ input[type="submit"]{
 	padding-right: 7px;
 }
 
+
+/* NOTICIAS */
+.publicacion{
+	float: right !important;
+}
 /*ESTILO DE TESTIMONIOS*/
 
 .autor-testimonio {
@@ -290,8 +299,8 @@ input[type="submit"]{
   position: fixed;
   height: 30px;
   width: 100%;
-  padding-top: 5px;
   z-index: 1000;
+  padding: 5px 6% 0 4.5%;
 }
 .redes a{
   color: #333E50 !important;
@@ -316,6 +325,10 @@ input[type="submit"]{
 
 .redes .google:hover{
   color: #E04A39 !important;
+}
+
+.redes .youtube:hover{
+  color: #E62117 !important;
 }
 
 
@@ -393,7 +406,7 @@ color: green;
 }
 
 .red{
-color: red;
+	color: red;
 }
 
 .logo_ayuda{
@@ -403,8 +416,100 @@ color: red;
 
 /* ========== MI CAMPUS */
 
-.pavimento{
-  background-color: red !important;
+#fondo_campus{
+	width: 100%;
+}
+
+/* ANIMACIONES */ 
+#ciclista{
+  position: absolute;
+  top: 77%;
+  left: 70%;
+  width: 4%;
+  background: transparent;
+  -moz-animation:anima_cicla 20s 1 alternate; /*Firefox */
+  -webkit-animation:anima_cicla 20s 1 alternate; /* Safari & Chrome */
+}
+
+/* Firefox */
+@-moz-keyframes anima_cicla{
+  from {left:0%;}
+  40%{top: 85%;}
+  to {left:70%; top: 77%;}
+}
+/* Safari & Chrome */
+@-webkit-keyframes anima_cicla{
+	from {left:0%;}
+	40%{top: 85%;}
+	to {left:70%; top: 77%;}
+}
+
+
+
+.Biblioteca{
+	position: absolute; 
+	top:64%;
+	left: 7%;
+	height: 20%;
+	width: 6%;
+}
+
+.Financiero{
+	position: absolute; 
+	top:64%;
+	left: 14%;
+	height: 20%;
+	width: 6%;
+}
+
+.Facultades{
+	position: absolute; 
+	top:66%;
+	left: 22%;
+	height: 17%;
+	width: 12%;
+}
+
+.Investigacion{
+	position: absolute; 
+	top:62%;
+	left: 36%;
+	height: 24%;
+	width: 5%;
+}
+
+.Academico{
+	position: absolute; 
+	top:56%;
+	left: 46%;
+	height: 28%;
+	width: 15%;
+}
+
+.Juridico{
+	position: absolute; 
+	top:60%;
+	left: 63%;
+	height: 25%;
+	width: 6%;
+}
+
+
+.EduVirtual{
+	position: absolute; 
+	top:71%;
+	left: 70%;
+	height: 15%;
+	width: 9%;
+}
+
+.iconos_campus img{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.cont_campus{
+	margin-top: 10%;
 }
 
 .espacio{
@@ -432,35 +537,34 @@ color: red;
 
 #enlaces_campus li span a:hover{
   text-decoration: none;
-  color: #D03954;
+  color: #D02438;
 }
 
 .campo{
    /* background: url(../../imgs/fondo.png) repeat-x center top; */
 }
 
-
 /* ANIMACIONES */ 
-.globo1{
+.nube1{
   position: absolute;
   top: 15%;
-  width: 5%;
+  width: 40%;
   background: transparent;
-  -moz-animation:miAnimacion 35s infinite alternate; /*Firefox */
-  -webkit-animation:miAnimacion 35s infinite alternate; /* Safari & Chrome */
+  -moz-animation:anima_nube1 90s infinite alternate; /*Firefox */
+  -webkit-animation:anima_nube1 90s infinite alternate; /* Safari & Chrome */
 }
 
 /* Firefox */
-@-moz-keyframes miAnimacion{
-  from {left:-10%;}
-  40%  { top: 60%;}
-  to {left:90%;}
+@-moz-keyframes anima_nube1{
+	from {right:0%;}
+	50%  { top: 25%;}
+	to {right:60%;}
 }
 /* Safari & Chrome */
-@-webkit-keyframes miAnimacion{
-  from {left:-10%;}
-  40%  { top: 60%;}
-  to {left:90%;}
+@-webkit-keyframes anima_nube1{
+	from {right:0%;}
+	50%  { top: 25%;}
+	to {right:60%;}
 }
 
 
@@ -512,7 +616,7 @@ color: red;
 
 .cabecera {
     background-color: transparent;
-    padding-top: 180px;
+    padding-top: 130px;
     padding-bottom: 20px;
 }
 

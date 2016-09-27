@@ -1,14 +1,38 @@
 <?php
-	$conexion = mysqli_connect("localhost", "root", "", "bitnami_campus");
 
+	$hostname = "localhost";
+	$username = "campusvi_campus";
+	$password = "campus_urep.2016";
+	$database = "campusvi_campus";
+	
+	$conexion = conectar($hostname, $username, $password, $database);
+	
+	/**
+	*Funcion Conexion con la Base de Datos
+	*@author Jhonatan Malaver
+	*@param String $hostname Nombre del Host 
+	*@param String $username Nombre del Usuario con privilegios en la base de datos
+	*@param String $password Contraseña de Acceso
+	*@param String $database Nombre de la base de datos
+	*@return $conexion Variable de Conexion
+	*/
+	function conectar($hostname, $username, $password, $database){
+	$conexion = mysqli_connect($hostname, $username, $password, $database);
 	if (!$conexion) {
 		echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
 		echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
 		echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
-		exit;
+		exit();
+	}
+	return $conexion;
 	}
 
-	//FUNCION EXPRESION REGULAR
+	/**
+	*Funcion de Validacion del ID
+	*@author Jhonatan Malaver
+	*@param Int $digitos Id del registro
+	*@return Mensaje Error de Id, Redirecciona y cierra sesion ; ID
+	*/
 	function valido($digitos){
 		$patron = "/^[[:digit:]]+$/";
 		if (preg_match($patron, $digitos)) {
@@ -19,8 +43,5 @@
 		}
 
 	}
-
-	//echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
-	//echo "Información del host: " . mysqli_get_host_info($enlace) . PHP_EOL;
 	
 ?>

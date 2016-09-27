@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../assets/img/logo.png">
+    <link rel="shortcut icon" href="../imgs/logo.png">
 
     <title>Campus Virtual</title>
 

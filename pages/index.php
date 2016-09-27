@@ -12,8 +12,8 @@
 	require_once("../requiere/menu.php"); ?> 
 
 	<div id="headerwrap">
-		<img src="../imgs/fondo3.png" width="100%">
-			<img class="globo1" src="../imgs/globo.png">
+		<img src="../imgs/fondo.png" width="100%">
+			<img class="nube1" src="../imgs/nube1.png">
 			
 		<div class="texto_banner centered">
 			<h1 id="frase1">Nuestra tradición <b>La ética</b></h1>
@@ -23,7 +23,7 @@
 	
 
 
-	<div class="container w">
+	<div class="container centered w">
 		<div class="row centered">
 			<h4>NOTICIAS</h4>
 			<?php
@@ -50,6 +50,7 @@
 			}
 			?>
 		</div>
+		<a href="../pages/noticias.php">Ver todas las noticias</a>
 	</div><!-- DG -->
 		
 	

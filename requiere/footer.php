@@ -1,4 +1,3 @@
-
 <div id="f">
 	<div class="row">
 		<div class="container">
@@ -79,7 +78,21 @@
 	    </div><!-- /.modal-content -->
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
-
+	
+	
+	<?php 
+	$datos = ""; 
+	if(isset($_GET['sesion'])){
+		print("
+		<script>
+			$(document).ready(function(){
+				$('#Ingreso').modal('show');
+			});
+		</script>
+		");
+		$datos = "<h5 class='red'> <i class='fa fa-warning'></i> Datos erróneos. <br>Por favor, inténtelo otra vez.</h5>";
+	}
+	?>
 	<!-- MODAL INGRESO -->
 	<div class="modal fade" id="Ingreso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal_ingreso">
@@ -90,16 +103,21 @@
 				</div>
 				<div class="modal-body">
 					<div class="row centered">
-						<form action="#" method="POST">
+					<!--
+					<form action="http://localhost/moodle/login/index.php" method="post" id="login">
+					-->
+						<form action="http://aulas.campusvirtualurepublicana.edu.co/login/index.php" method="post" id="login">
 							<table cellpadding="4">
 								<tr>
 									<td><h2>Ingresa a tu Aula</h2></td>
 								</tr>
 								<tr>
-									<td><input type="text" id="usuario" name="user" placeholder="Usuario" required/></td>
+									<td><input type="text" id="usuario"  name="username" placeholder="Usuario" required/></td>
 								</tr>
 								<tr>
-									<td><input type="password" id="password" name="pass" placeholder="Contraseña" required/></td>
+									<td><input type="password" id="password" name="password" placeholder="Contraseña" required/><br><br>
+									<?php echo $datos; ?>
+									</td>
 								</tr>
 								<tr>
 									<td align="left"><input type="checkbox" id="ver_pass" onchange="mostrar('password', this.id)" /> Ver contraseña</td>

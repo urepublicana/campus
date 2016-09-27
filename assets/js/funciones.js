@@ -1,12 +1,17 @@
 // Funcion SCROLL de Menu Rojo = D03954
 window.onscroll = function() {myFunction()};
 function myFunction() {
+	var pagina = $("#logo_virtual").attr("title");
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 		$("#menu_nav").addClass("menu_scroll");
 		$("#redes").addClass("redes_scroll");
+		$("#logo_virtual").attr("src", "../imgs/logo_virtual_2.png");
 	} else {
 		$("#menu_nav").removeClass("menu_scroll");
 		$("#redes").removeClass("redes_scroll");
+		if(pagina == "index"){
+			$("#logo_virtual").attr("src", "../imgs/logo_virtual.png");
+		}
 	}
 }
 
@@ -83,12 +88,13 @@ function ver_check(){
 }
 
 
-function campus(){
-	//var div_enlaces =  document.getElementById("enlaces_campus");
-	$("#enlaces_campus").removeClass("ocultar").addClass("mostrar fadeIn");
+function campus(title){
+	$('.iconos_campus').addClass("ocultar");
+	$('.cont_campus').addClass("ocultar");
+	$("#"+title).removeClass("ocultar").addClass("mostrar stretchRight");
 	$('html, body').stop().animate({
-		scrollTop: jQuery("#img_campus").offset().top
-	}, 1500);
+		scrollTop: jQuery("#ciclista").offset().top
+	}, 2000);
 	//alert("esta")
 }
 

@@ -12,7 +12,7 @@ $fec_hoy = date("Y-m-d");
 if($numero_post > 0){
 		//Tomamos Valores
 	for($i=0;$i < $numero_post ;$i++){
-		$$tags[$i]=$valores[$i];
+		${$tags[$i]}=$valores[$i];
 	}
 
 	if($accion == "agregar"){
@@ -84,12 +84,6 @@ if($numero_post > 0){
 
 
 	}
-
-	/*
-	
-	*/
-
-	
 }
 //Eliminar noticias
 $numero_get = count($_GET);
