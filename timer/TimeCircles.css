@@ -1,0 +1,105 @@
+/**
+ *	This element is created inside your target element
+ *	It is used so that your own element will not need to be altered
+ **/
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+
+body{
+	text-align: center;
+	overflow-x:hidden;
+	overflow-y:hidden; 
+}
+#texto{
+	position: absolute;
+	top: 15%;
+	left: 10%;
+	right: 10%;
+	width: 80%;
+	font-family: "Raleway";
+	color: #EEE;
+}
+#texto h1{
+	font-size: 4em;
+}
+
+#texto h2{
+	font-size: 2.5em;
+}
+
+#marcas{
+	position: absolute; 
+	width: 20%;
+	top: 45%;
+	left: 40%;
+	right: 35%;
+}
+
+#CountDownTimer{
+	width: auto;
+	position: absolute;
+	bottom: 10%;
+	left: 30%;
+	right: 30%;
+}
+
+
+
+#cohete{
+	position: absolute; 
+	top: -100%;
+	left: 45%;
+	width: 10%;
+	 -moz-animation:cohete 25s 1 alternate; /*Firefox */
+	-webkit-animation:cohete 25s 1 alternate; /* Safari & Chrome */
+}
+/* Firefox */
+@-moz-keyframes cohete{
+	from {top:100%;}
+	to {top: -100%;}
+}
+@-webkit-keyframes cohete{
+	from {top:100%;}
+	to {top: -100%;}
+}
+
+.time_circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ *	This is all the elements used to house all text used
+ * in time circles
+ **/
+.time_circles > div {
+    position: absolute;
+    text-align: center;
+}
+
+/**
+ *	Titles (Days, Hours, etc)
+ **/
+.time_circles > div > h4 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Century Gothic', Arial;
+    line-height: 1;
+}
+
+/**
+ *	Time numbers, ie: 12
+ **/
+.time_circles > div > span {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Century Gothic', Arial;
+    line-height: 1;
+    font-weight: bold;
+}
+

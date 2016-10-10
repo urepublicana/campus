@@ -18,13 +18,8 @@
 	<div class="container w">
 		<div class="row">
 			<div class="col-xs-1"></div>
-			<div class="col-xs-3">
-				<img src="../imgs/uni3.png" width="100%">
-			</div><!-- col-lg-4 -->
-			
-			<div class="col-xs-7">
-				<h4>BIENESTAR</h4>
-				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable</p>
+			<div class="col-xs-10">
+				<img src="../imgs/en_construccion.png" width="100%">
 			</div><!-- col-lg-4 -->
 			<div class="col-xs-1"></div>
 		</div><!-- row -->

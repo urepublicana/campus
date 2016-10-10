@@ -29,7 +29,7 @@
 	?>
 		<div class="row">
 			<div class="col-lg-4">
-				<?php print ("<img src='../admin/imgs_news/$row[imagen]' width='100%' />"); ?>
+				<?php print ("<img src='../admin/imgs_news/$row[imagen]' width='80%' />"); ?>
 			</div><!-- col-lg-4 -->
 			<div class="col-lg-8">
 				<?php print("
@@ -39,6 +39,7 @@
 				"); ?>
 			</div><!-- col-lg-4 -->
 		</div><!-- row -->
+		<br><br>
 	<?php 
 	print("</a>");
 	}?>
