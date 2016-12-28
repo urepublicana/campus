@@ -1,4 +1,4 @@
-<?php
+<?php require_once("../php/locked.php"); 
 require_once("../php/conexion.php");
 
 //CICLO DE RECIBIR DATOS
@@ -7,6 +7,7 @@ $tags = array_keys($_POST);
 $valores = array_values($_POST);
 // Fecha Hoy
 $fec_hoy = date("Y-m-d");
+
 
 //Tomamos Valores POST
 if($numero_post > 0){
@@ -32,6 +33,14 @@ if($numero_post > 0){
 			//Renombrar el Archivo
 			$extension = end(explode('.',$nombreFichero)); 
 			$idUnico = time();
+
+			if($extension != "jpg" or $extension != "png" or $extension != "JPG" or $extension != "PNG" or $extension != "gif"){
+				print("<script type='text/javascript'>
+				window.alert('Formato de Imagen Invalido')</script> 
+				<meta http-equiv='refresh' content='0.1; url=../index.php' />");
+				session_destroy();
+				exit();
+			}
 			$nombreFichero = $idUnico.".".$extension;
 
 		}
@@ -53,7 +62,10 @@ if($numero_post > 0){
 		}	  
 				// Mover foto a su ubicación definitiva
 		$imagen = $nombreFichero;
+
 		$fecha_publicacion = $fec_hoy;
+
+
 
 		$query_insert = "INSERT INTO noticias (titular, importancia, imagen, fecha_publicacion, fecha_final, resumen, noticia) 
 		VALUES ('$titular', '$importancia', '$imagen', '$fecha_publicacion', '$fecha_final', '$resumen', '$noticia')";
@@ -64,16 +76,75 @@ if($numero_post > 0){
 			move_uploaded_file ($_FILES['imagen']['tmp_name'], $nombreDirectorio . $nombreFichero);
 		}
 
-		print("<script type='text/javascript'>window.alert('Guardado')</script>
+		print("<script type='text/javascript'>window.alert('Guardado $importancia')</script>
 			<meta http-equiv='refresh' content='0.1; url=noticias.php' />");
 	}
 
 
+	/*EDITAR NOTICIAS*/
 	if($accion == "editar"){
+		
+		// Comprobar cambio de Fecha
+		if(!empty($fecha_final_2)){
+			$fecha_final = $fecha_final_2;
+		}
 
 		$imagen = $_FILES['imagen']['name'];
 		if($imagen == ""){
 			$imagen =  $imagen_actual;
+		}
+
+		else{
+			unlink("imgs_news/$imagen_actual");
+			$nombreFichero = "";
+			$copiarFichero = false;
+					// Copiar fichero en directorio de ficheros subidos
+					// Se renombra para evitar que sobreescriba un fichero existente
+					// Para garantizar la unicidad del nombre se añade una marca de tiempo
+			if (is_uploaded_file ($_FILES['imagen']['tmp_name']))
+			{
+				$nombreDirectorio = "imgs_news/";
+				$nombreFichero = $_FILES['imagen']['name'];
+				$copiarFichero = true;
+
+				//Renombrar el Archivo
+				$extension = end(explode('.',$nombreFichero)); 
+
+				if($extension != "jpg" or $extension != "png" or $extension != "JPG" or $extension != "PNG" or $extension != "gif"){
+					print("<script type='text/javascript'>
+					window.alert('Formato de Imagen Invalido')</script> 
+					<meta http-equiv='refresh' content='0.1; url=../index.php' />");
+					session_destroy();
+					exit();
+				}
+
+				$idUnico = time();
+				$nombreFichero = $idUnico.".".$extension;
+
+			}
+					// El fichero introducido supera el límite de tamaño permitido
+			else if ($_FILES['imagen']['error'] == UPLOAD_ERR_FORM_SIZE)
+			{
+				$maxsize = 2000000;
+				$errores["imagen"] = "¡El tamaño del fichero supera el límite permitido ($maxsize bytes)!";
+				$error = true;
+			}
+					// No se ha introducido ningún fichero
+			else if ($_FILES['imagen']['name'] == "")
+				$nombreFichero = '';
+					// El fichero introducido no se ha podido subir
+			else
+			{
+				$errores["imagen"] = "¡No se ha podido subir el fichero!";
+				$error = true;
+			}	  
+					// Mover foto a su ubicación definitiva
+			$imagen = $nombreFichero;
+			$fecha_publicacion = $fec_hoy;
+
+			if ($copiarFichero){
+				move_uploaded_file ($_FILES['imagen']['tmp_name'], $nombreDirectorio . $nombreFichero);
+			}
 		}
 
 		$query_update = "UPDATE noticias SET titular = '$titular', importancia = '$importancia', imagen = '$imagen', fecha_publicacion = '$fec_hoy', fecha_final = '$fecha_final', resumen = '$resumen', noticia = '$noticia' WHERE id_noticia = '$id_noticia'";
@@ -81,7 +152,6 @@ if($numero_post > 0){
 		$conexion->query($query_update) or die ("ERROR INSERTAR NOTICIA".mysql_error());
 
 		print("<script type='text/javascript'>window.alert('Noticia Actualizada')</script> <meta http-equiv='refresh' content='0.1; url=noticias.php' />");
-
 
 	}
 }

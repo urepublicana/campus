@@ -15,17 +15,14 @@ function myFunction() {
 	}
 }
 
-var var_cambio = setInterval(cambio, 6000);
-function cambio(){
-	var frase1 =  document.getElementById("frase1");
-	var frase2 =  document.getElementById("frase2");
-	if (frase2.className == "no_ver"){
-		frase2.className = "fadeIn";
-		frase1.className = "no_ver";
-	}else{
-		frase2.className = "no_ver"
-		frase1.className = "fadeIn"
-	}
+
+timer = setTimeout('temporizador()', 5000);
+function temporizador() {
+	$(document).ready(function() {
+		$("#frase1").fadeOut(1500).delay(5000).fadeIn(1500);
+		$("#frase2").fadeOut(1500).delay(6000).fadeIn(1500, function(){timer = setTimeout("temporizador()", 2000);
+	});
+	});
 }
 
 // Funcion de ANIMACION Scroll
@@ -67,11 +64,7 @@ function mostrar(id_campo, check){
 	}
 }
 
-// Fechas
-$(function() {
-	$("#fecha_final").datepicker();
-	$("#fecha_final").datepicker( "option", "dateFormat", "yy-mm-dd" );
-});
+
 
 
 function confirmar() {
@@ -83,7 +76,7 @@ function confirmar() {
 function ver_check(){
 	$("#verificado").removeClass("ocultar").addClass("mostrar slideUp");
 	$('html, body').stop().animate({
-		scrollTop: jQuery("#botones").offset().top
+		scrollTop: jQuery("#help_ticket").offset().top
 	}, 1500);
 }
 
@@ -99,17 +92,74 @@ function campus(title){
 }
 
 $(document).ready(function() {
-    $('.ancla').click(function(){
-        var link = $(this);
-        var anchor  = link.attr('href');
-         $('.cont_campus').addClass( "ocultar" );
-        $(anchor).removeClass( "ocultar" ).addClass( "mostrar espacio" );
-        $('html, body').stop().animate({
-            scrollTop: jQuery(anchor).offset().top
-        }, 1500);
-        return false;
-    });
+	$('.ancla').click(function(){
+		var link = $(this);
+		var anchor  = link.attr('href');
+		$('.cont_campus').addClass( "ocultar" );
+		$(anchor).removeClass( "ocultar" ).addClass( "mostrar espacio" );
+		$('html, body').stop().animate({
+			scrollTop: jQuery(anchor).offset().top
+		}, 1500);
+		return false;
+	});
 });
+
+window.onload = navegador; 
+
+function navegador(){
+	
+	var recomendacion_nav = "<a target='_blank' href='https://www.mozilla.org/es-ES/firefox/new/'><i class='fa fa-cloud-download'></i> Descargar Firefox</a> <br>"+
+	"<a target='_blank' href='https://www.google.es/chrome/browser/desktop/'><i class='fa fa-cloud-download'></i> Descargar Google Chrome</a>";
+	
+	var navegador = navigator.userAgent;
+
+	if (navigator.userAgent.indexOf('MSIE') !=-1) {
+		$('#notifica_nav').removeClass("ocultar");
+		$('.nube1').addClass("ocultar");
+
+		//$("#notifica_nav").html("<img src='../imgs/explorer.png' class='img_ayuda' /><h5><i class='fa fa-minus-circle red'></i> Explorer</h5>"+recomendacion_nav);
+	} 
+	else if (navigator.userAgent.indexOf('Firefox') !=-1) {
+		//$("#notifica_nav").html("<img src='../imgs/firefox.png' class='img_ayuda' /><h5>Firefox  <i class='fa fa-check-circle green'></i></h5>");
+	} 
+	else if (navigator.userAgent.indexOf('Chrome') !=-1) {
+		//$("#notifica_nav").html("<img src='../imgs/chrome.png' class='img_ayuda' /><h5>Google Chrome <i class='fa fa-check-circle green'></i></h5>");
+	} 
+	else if (navigator.userAgent.indexOf('Opera') !=-1) {
+		$('#notifica_nav').removeClass("ocultar");
+		$('.nube1').addClass("ocultar");
+		//$("#notifica_nav").html("<img src='../imgs/opera.png' class='img_ayuda' /><h5><i class='fa fa-minus-circle red'></i> Opera <h5>"+recomendacion_nav);
+	} 
+	else {
+		$('#notifica_nav').removeClass("ocultar");
+		$('.nube1').addClass("ocultar");
+		//$("#notifica_nav").html("<img src='../imgs/desconocido.png' class='img_ayuda' /><h5><i class='fa fa-minus-circle red'></i> Navegador desconocido </h5>"+recomendacion_nav);
+	}
+}
+
+function mostrar_nav(){
+	var x = $("#mostrar_navegadores").hasClass("ocultar");
+	if(x == true){
+		$('#mostrar_navegadores').removeClass("ocultar");
+	}else{
+		$('#mostrar_navegadores').addClass("ocultar");
+	}
+}
+
+function checkExt(e) {//use in a form event or ina input
+	value=e.value;
+	if( !value.match(/\.(jpg)|(gif)|(png)$/) ){//here your extensions
+		alert("El archivo no es una Imagen");   //actions like focus, not validate...
+		$("#boton_enviar").attr('disabled', true);
+		$('#create_new').attr('action', 'index.php');
+		$('#edit_new').attr('action', 'index.php');
+	}
+	else {//right extension
+		$("#boton_enviar").attr('disabled', false);
+		$('#create_new').attr('action', 'crud_noticia.php');
+		$('#edit_new').attr('action', 'crud_noticia.php');
+	}
+}
 
 
 

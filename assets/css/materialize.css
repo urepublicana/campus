@@ -1,3 +1,66 @@
+#logo_virtual{
+  width: 100%;
+}
+
+@media (max-width: 980px){
+  #logo_virtual{
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px){
+  #logo_virtual{
+    width: 80px;
+  }
+}
+
+@media (max-width: 767px){
+  .navbar-collapse{
+    background-color: #D02438;
+    border-radius: 10px; 
+  }
+}
+
+@media (max-width: 360px){
+  #logo_virtual{
+    width: 80px;
+  }
+
+  .navbar-collapse{
+    background-color: #D02438;
+    border-radius: 10px; 
+  }
+
+}
+
+
+
+#notifica_nav{
+  position: relative;
+  width: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#mostrar_navegadores{
+  background-color: gold;
+  position: relative;
+  width: 40%;
+  height: auto;
+  top: 30%;
+  left: 30%;
+  border-radius: 10px;
+  border: 2px solid yellow;
+  text-align: center;
+}
+
+@media (max-width: 767px){
+  #mostrar_navegadores{
+  width: 80%;
+  height: auto;
+  left: 10%;
+  }
+}
 
 /*=========TABS====*/ 
 
@@ -61,6 +124,46 @@
   height: 2px;
   background-color: #f6b2b5;
   will-change: left, right;
+}
+
+
+
+.btn-app {
+  border-radius: 3px;
+  position: relative;
+  padding: 15px 5px;
+  margin: 10px;
+  min-width: 22%;
+  height: 60px;
+  text-align: center;
+  color: #000;
+  border: 1px solid #ddd;
+  background-color: #d8d8d8;
+  font-size: 12px;
+}
+.btn-app > .fa,
+.btn-app > .glyphicon,
+.btn-app > .ion {
+  font-size: 20px;
+  display: block;
+}
+.btn-app:hover {
+  background: #6C83A9;
+  color: #FFF !important;
+  border-color: #aaa;
+}
+.btn-app:active,
+.btn-app:focus {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-app > .badge {
+  position: absolute;
+  top: -3px;
+  right: -10px;
+  font-size: 10px;
+  font-weight: 400;
 }
 
 

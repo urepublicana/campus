@@ -1,9 +1,25 @@
-﻿<!DOCTYPE html>
+﻿<?php require_once("../php/locked.php"); ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<?php 
 	require_once("../requiere/head.php"); 
 	?>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+$( function() {
+$( "#fecha_final" ).datepicker();
+$( "#fecha_final" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+
+$( "#fecha_final_2" ).datepicker();
+$( "#fecha_final_2" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+} );
+</script>
 </head>
 
 <body>
@@ -17,6 +33,7 @@
 		</div>
 	</div>
 
+	<!--LISTAR NOTICIAS-->
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -57,7 +74,7 @@
 	</div><!-- container -->
 	
 
-	<!-- Modal -->
+	<!-- AGREGAR NOTICIAS -->
 	<div class="modal fade" id="nueva_noticia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -69,7 +86,7 @@
 				<div>
 					<div class="row">
 						<h2>Agregar Noticia</h2>
-						<form action="crud_noticia.php" method="POST" enctype="multipart/form-data">
+						<form id="create_new" action="crud_noticia.php" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="accion" value="agregar">
 							<table cellpadding="5" width="90%">
 								<tr>
@@ -83,7 +100,7 @@
 									<td><label>Fecha final</label></td>
 									<td>
 									<input type="hidden" name="fecha_publicacion">
-									<input type="text" class="form-control" name="fecha_final" id="fecha_final" required=""></td>
+									<input type="date" class="form-control" name="fecha_final" id="fecha_final" required=""></td>
 								</tr>
 								<tr>
 									<td><label>Resumen</label></td>
@@ -95,24 +112,22 @@
 								</tr>
 								<tr>
 									<td><label>Imagen</label></td>
-									<td><input type="file" class="form-control" name="imagen" required="" accept="image/*"></td>
+									<td><input type="file" class="form-control" name="imagen" required="" accept="image/*" onchange="checkExt(this)"></td>
 								</tr>
 								<tr>
-									<td><label>Importancia</label></td>
+									<td><label>¿Desea que esta Noticia este en las Aulas Virtuales?</label></td>
 									<td>
-										<select class="form-control" name="importancia">
-											<option value="1">Importante</option>
-											<option value="0">Pasajero</option>
-										</select>
+										<input type="checkbox" name="importancia" value="Importante"> Si<br>
 									</td>
 								</tr>
 								<tr>
-									<td colspan="2"><input class="btn btn-success" type="submit" value="GUARDAR"></td>
+									<td colspan="2"><input id="boton_enviar" class="btn btn-success" type="submit" value="GUARDAR"></td>
 								</tr>
 							</table>
 						</form>
 					</div>
 				</div>
+
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
 				</div>
@@ -121,7 +136,7 @@
 	</div><!-- /.modal -->
 
 
-	<!-- Modal EDITAR -->
+	<!-- EDITAR NOTICIAS -->
 	<?php
 	$numero_get = count($_GET);
 	if ($numero_get > 0){
@@ -146,7 +161,7 @@
 						<div>
 							<div class="row">
 								<h2>Editar Noticia</h2>
-								<form action="crud_noticia.php" method="POST" enctype="multipart/form-data">
+								<form id="edit_new" action="crud_noticia.php" method="POST" enctype="multipart/form-data">
 
 								<input type="hidden" name="accion" value="editar">
 
@@ -163,7 +178,11 @@
 										</tr>
 										<tr>
 											<td><label>Fecha final</label></td>
-											<td><input type="text" class="form-control" name="fecha_final" id="fecha_final" required="" value="<?php echo $row_edita['fecha_final']; ?>" ></td>
+											<td>
+												<label><?php echo $row_edita['fecha_final']; ?></label>
+												<input type="hidden" name="fecha_final"  value="<?php echo $row_edita['fecha_final']; ?>">
+												<input type="date" class="form-control" name="fecha_final_2" id="fecha_final_2">
+											</td>
 										</tr>
 										<tr>
 											<td><label>Resumen</label></td>

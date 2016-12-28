@@ -1,0 +1,50 @@
+<IfModule mod_rewrite.c>
+# Activar RewriteEngine
+RewriteEngine on
+RewriteBase / 
+RewriteCond %{SCRIPT_FILENAME} -d [OR]
+RewriteCond %{SCRIPT_FILENAME} -f
+RewriteRule "(^|/)\." - [F]
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} \.php|\.ini|\.xml [NC]
+RewriteCond %{REQUEST_URI} \/library\/ [OR]
+RewriteCond %{REQUEST_URI} \/images\/ [OR]
+RewriteCond %{REQUEST_URI} \/cache\/
+RewriteRule ^(.*)$ index.php [R=404]
+
+Options -Indexes
+
+</IfModule>
+
+<Files *.php>
+Deny from all
+</Files>
+
+<Files *.js>
+Deny from all
+</Files>
+
+<Files *.sql>
+Deny from all
+</Files>
+
+<Files *.xml>
+Deny from all
+</Files>
+
+<Files *.py>
+Deny from all
+</Files>
+
+Order Allow,Deny
+Deny from all
+<FilesMatch "^[^.]+\.(?i:jpe?g|png|gif)$">
+Allow from all
+</FilesMatch>
+
+<FilesMatch "\.(php|php\.)(.+)(\w|\d)$">
+ Order Allow,Deny
+ Deny from all
+</FilesMatch>
+

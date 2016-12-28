@@ -1,0 +1,10 @@
+Comentario
+
+Moodle/login/index.php
+
+
+$campus_virtual = "http://campusvirtualurepublicana.edu.co/pages/index.php?sesion=0";
+if(!isset($_POST['usuario'])){
+	header('Location: '.$campus_virtual);
+}
+

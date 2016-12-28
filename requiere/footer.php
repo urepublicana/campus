@@ -7,44 +7,51 @@
 			<div class="col-sm-3 lefted">
 			<h4>Oferta Academica</h4>
 				<ul class="nav">
-					<li><span class="fa fa fa-angle-right"/><a href="#">Programas Presenciales</a></li>
 					<li><span class="fa fa fa-angle-right"/><a href="#">Programas Virtuales</a></li>
-					<li><span class="fa fa fa-angle-right"/><a href="#">Admisiones</a></li>
-					<li><span class="fa fa fa-angle-right"/><a data-toggle="modal" data-target="#Contacto" href="#Contacto">Contactenos</a></li>
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://urepublicana.edu.co/admisiones-2/">Admisiones</a></li>
 				</ul>
+
+			<h4>Estatutos Generales</h4>
+				<ul class="nav">
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://urepublicana.edu.co/wp-content/uploads/2015/04/Reglamento-Docente-Ajustado-Marzo-19-2015.pdf">Reglamento Docente</a></li>
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://urepublicana.edu.co/wp-content/uploads/2015/04/Reglamento-Estudiantil-Ajustado-Mz-19-de-2015.pdf">Reglamento Estudiantil</a></li>
+				</ul>
+
 			</div>
 			<div class="col-sm-3 lefted">
 			<h4>Sitios de Interes</h4>
 				<ul class="nav">
-					<li><span class="fa fa fa-angle-right"/><a href="#">AVACUR</a></li>
-					<li><span class="fa fa fa-angle-right"/><a href="#">Sistema Academico</a></li>
-					<li><span class="fa fa fa-angle-right"/><a href="#">Republicana Radio</a></li>
-					<li><span class="fa fa fa-angle-right"/><a href="#">Biblioteca</a></li>
-					<li><span class="fa fa fa-angle-right"/><a href="#">Centro de Investigaciones</a></li>
-					<li><span class="fa fa fa-angle-right"/><a href="#">Consultorio Juridico</a></li>
-					<li><span class="fa fa fa-angle-right"/><a href="#">Escuela de Altos Estudios</a></li>
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://republicanaradio.com/">Republicana Radio</a></li>
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://urepublicana.edu.co/biblioteca/informacion-general/">Biblioteca</a></li>
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://investigacion.urepublicana.edu.co/">Centro de Investigaciones</a></li>
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://consultoriojuridico.urepublicana.edu.co/">Consultorio Juridico</a></li>
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://urepublicana.edu.co/registro-control/">Registro y Control</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-3 lefted">
 			<h4>Otros</h4>
 				<ul class="nav">
-					<li><span class="fa fa fa-angle-right"/><a href="#">Trabaje con nosotros</a></li>
-					<li><span class="fa fa fa-angle-right"/><a href="#">Oficina de Egresados</a></li>
-					<li><span class="fa fa fa-angle-right"/><a href="#">Ley de Protección de Datos</a></li>
-					<li><span class="fa fa fa-angle-right"/><a href="../admin/index.php">Administrar</a></li>
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://urepublicana.edu.co/trabaje-con-nosotros/">Trabaje con nosotros</a></li>
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://urepublicana.edu.co/estudiantes/egresados/">Oficina de Egresados</a></li>
+					<li><span class="fa fa fa-angle-right"/><a target="_blank" href="http://urepublicana.edu.co/ley-de-proteccion-de-datos/">Ley de Protección de Datos</a></li>
+					
+					<li><span class="fa fa fa-angle-right"/><a data-toggle="modal" data-target="#Contacto" href="#Contacto">Contactenos</a></li>
+
+					<!-- 
+						<li><span class="fa fa fa-angle-right"/><a href="../admin/index.php">Administrar</a></li>
+					-->
 				</ul>
 			</div>
 		</div><!-- container -->
 	</div>
-</div><!-- Footer -->
-<div class="footer_down centered">
+	<div class="footer_down centered">
 	Copyright &copy; 2016 - Corporacion Universitaria Republicana
 </div>
+</div><!-- Footer -->
 
-	<?php 
-	//CERRAR CONEXION
-	mysqli_close($conexion);
-	?>
+
+
+
 	<!-- MODAL FOR CONTACT -->
 	<!-- Modal -->
 	<div class="modal fade" id="Contacto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -56,7 +63,7 @@
 	      </div>
 	      <div class="modal-body">
 		        <div class="row centered">
-				<img src="../imgs/logo.png" width="90%">
+				<img src="../imgs/logo.png" width="40%">
 		        	<p></p>
 		        	<p>
 		        		Corporacion Universitaria Republicana<br/>
@@ -64,9 +71,14 @@
 						Carrera 19 No 7 - 62<br/>
 						contacto@urepublicana.com
 		        	</p>
-					<a href="#"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"><i class="fa fa-google-plus"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+					<a class="twitter" target="_blank" href="https://twitter.com/URepublicana"><i class="fa fa-twitter"></i></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="facebook" target="_blank" href="https://www.facebook.com/Corporaci%C3%B3n-Universitaria-Republicana-150568701638953/?fref=ts"><i class="fa fa-facebook"></i></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="google" target="_blank" href="https://plus.google.com/u/0/+urepublicana"><i class="fa fa-google-plus"></i></a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="youtube" target="_blank" href="https://www.youtube.com/user/UREPUBLICANARADIO"><i class="fa fa-youtube-play"></i></a>
 		        	<div id="mapwrap">
 					<!-- MAPA DE GOOGLE-->
 					</div>	
@@ -102,12 +114,13 @@
 					<h4 class="modal-title" id="myModalLabel">Ingreso</h4>
 				</div>
 				<div class="modal-body">
+
 					<div class="row centered">
 					<!--
 					<form action="http://localhost/moodle/login/index.php" method="post" id="login">
 					-->
 						<form action="http://aulas.campusvirtualurepublicana.edu.co/login/index.php" method="post" id="login">
-							<table cellpadding="4">
+							<table cellpadding="6" >
 								<tr>
 									<td><h2>Ingresa a tu Aula</h2></td>
 								</tr>
@@ -115,7 +128,7 @@
 									<td><input type="text" id="usuario"  name="username" placeholder="Usuario" required/></td>
 								</tr>
 								<tr>
-									<td><input type="password" id="password" name="password" placeholder="Contraseña" required/><br><br>
+									<td><input type="password" id="password" name="password" placeholder="Contraseña" required/><br>
 									<?php echo $datos; ?>
 									</td>
 								</tr>
@@ -125,22 +138,16 @@
 								<tr>
 									<td align="center"><input type="submit" class="btn btn-success" value="INGRESAR" required/> </td>
 								</tr>
+								<tr>
+									<td align="center" class="olvido"><a href="../pages/olvido_pass.php">¿Olvidaste tu Usuario o tu Contraseña?</a></td>
+								</tr>
 							</table>
 						</form>
-						<h3>¿NECESITAS AYUDA?</h3>
-						<div class="col-lg-12">
-							<table width="90%">
-								<tr>
-									<td><a class="tooltipped" data-position="top" data-delay="40" data-tooltip="Chat" href="javascript:void(Tawk_API.toggle())" ><img src="../imgs/help_chat.png" class="not_inicio" title="Chat" /></a></td>
-									<td><a class="tooltipped" data-position="top" data-delay="40" data-tooltip="Mesa de ayuda"><img src="../imgs/help_ticket.png" class="not_inicio"/></a></td>
-								</tr>
-								<tr>
-									<td><a class="tooltipped" data-position="top" data-delay="40" data-tooltip="Preguntas frecuentes"><img src="../imgs/help_faq.png" class="not_inicio"/></a></td>
-									<td><a class="tooltipped" data-position="top" data-delay="40" data-tooltip="Verifica tu sistema" href="../pages/ayuda.php"><img src="../imgs/help_check.png" class="not_inicio"/></td>
-								</tr>
-							</table>
-						</div>
+						<br>
+						<a href="../pages/ayuda.php"><h4>¿NECESITAS AYUDA?</h4></a>
+						<br>
 					</div>
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
@@ -148,6 +155,11 @@
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+
+	<?php 
+	//CERRAR CONEXION
+	mysqli_close($conexion);
+	?>
 	
 
     <!-- Bootstrap core JavaScript
