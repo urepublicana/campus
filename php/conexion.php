@@ -4,8 +4,12 @@
 	$username = "campusvi_campus";
 	$password = "campus_urep.2016";
 	$database = "campusvi_campus";
+
+	$db_moodle = "bitnami_moodle";
 	
 	$conexion = conectar($hostname, $username, $password, $database);
+
+	$con_moodle = conectar($hostname, $username, $password, $db_moodle);
 	
 	/**
 	*Funcion Conexion con la Base de Datos

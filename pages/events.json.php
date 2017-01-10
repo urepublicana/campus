@@ -8,10 +8,10 @@ $out = array();
 while ($row = $resultado->fetch_assoc()) {
 
 	$fecha_i = new DateTime($row['fecha_inicio']);
-	$fecha_i->add(new DateInterval('P1D'));
+//	$fecha_i->add(new DateInterval('P1D'));
 
 	$fecha_f = new DateTime($row['fecha_final']);
-	$fecha_f->add(new DateInterval('P1D'));
+//	$fecha_f->add(new DateInterval('P1D'));
 
     $fecha_inicio = date($fecha_i->format('Y-m-d'));
     $fecha_final = date($fecha_f->format('Y-m-d'));
